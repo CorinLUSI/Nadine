@@ -1,6 +1,13 @@
-body {
-font-family: 'Lora', serif;
+@import url('https://fonts.googleapis.com/css?family=Lora');
+html, body {
+font-family: 'Lora', serif; !important
+box-sizing: border-box;
+line-height: 1.15;
 }
+* {
+font-family: 'Lora', serif; !important
+}
+
 .footer-bottom {
 background-color: #15224f;
 min-height: 30px;
