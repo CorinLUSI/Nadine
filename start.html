@@ -88,11 +88,30 @@
         width:80%;
         top:10%
     }
+    #centerContent > .align-items-center {
+        min-height:800px;
+    }
+    #centerContent > .align-items-center > div {
+        height:700px;
+    }
+    #centerContent > .align-items-center > div > div .sideBox {
+        min-height: 320px;
+        background-color: #f6e0ec;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
     #navTop {
         width:80%;
         margin:0% 10%;
         z-index:1;
         height:80%;
+    }
+    #navTop .navbar-nav {
+        height: 250px;
+    }
+    #navTop a:nth-last-child(-n+4) {
+        margin-top: 120px;
+        height: 100px;
     }
     .ribbon {      
         background:#722ea6;                
@@ -136,14 +155,22 @@
     #contactBox {
         background: green;
         min-height:100%;
+        height:600px;
+        padding-left:60px; 
+        padding-right:30px;
     }
     #mainSlider {
         background: orange;
         min-height:100%;
+        height:600px;
+        padding-top:15px;
     }
     #socialMedia {
         background: pink;
         min-height:100%;
+        height:600px;
+        padding-left:30px; 
+        padding-right:60px;
     }
     .openHours {
         width:100%;
@@ -159,6 +186,22 @@
     }
     .contactIcons {
         margin-bottom:10px;
+    }
+    .carousel-item img {
+        max-width: 1366px;
+        max-height: 768px;
+        width: 100%;
+        height:auto;
+    }
+    #treasureLogo {
+        background-image:url(img/grandmas-treasures-logo-shadow.png);
+        height: 250px;
+        text-indent: -9999px;
+        width: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-top: 70px;
     }
     @media (max-width: 575px) { 
         .carousel-item {
@@ -229,17 +272,18 @@
 <body id="indexBody">
     <div id="topContainer" class="container-fluid">
         <div id="topNavContainer" class="container-fluid">
-            <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand d-md-block d-none" href="#">Home</a>
+            <nav id="navTop" class="navbar navbar-expand-xl navbar-light">
+                <a class="navbar-brand d-xl-none" href="#">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Products<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Philosophy</a>
-                        <a class="nav-item nav-link" href="#">Store</a>
-                        <a class="nav-item nav-link disabled" href="#">Shop</a>
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-nav nav-fill w-100">
+                        <a id="treasureLogo" class="nav-item nav-link order-3 d-none d-xl-block" href="#">Home</a>
+                        <a class="nav-item nav-link active order-1" href="#">Products<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link order-2" href="#">Philosophy</a>
+                        <a class="nav-item nav-link order-4" href="#">Store</a>
+                        <a class="nav-item nav-link disabled order-5" href="#">Shop</a>
                     </div>
                 </div>
             </nav>
@@ -249,21 +293,22 @@
     </div>
     <div id="midContainer" class="container-fluid">
         <div id="centerContent" class="container-fluid">
-            <div class="row">
+            <div class="row align-items-center">
                 <div id="contactBox" class="col-xl-3 col-12 order-2">
                     <div class="row">
-                        <div class="col-xl-12 col-6">
-                            <h1>
-                                Products
-                            </h1>
+                        <div class="sideBox col-xl-12 col-6">
+                            <h2>
+                                Grandma's Treasures
+                            </h2>
                             <p>
-                                Grandma's Treasures dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and <a href="products.html">more</a>. 
+                                 ... dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and <a href="products.html">more</a>. 
                             </p>
+                            <p> Have a taste of our freshly made products at "Brotzeit" our local german <a href="store.html">bakery</a></p>
                         </div>
-                        <div class="col-xl-12 col-6">
-                            <h1>
+                        <div class="sideBox col-xl-12 col-6">
+                            <h2>
                                 Contact
-                            </h1>
+                            </h2>
                             <div class="contactIcons">
                                 <button type="button" class="btn btn-default btn-sm">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -278,6 +323,8 @@
                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                 </button>
                             </div>
+                            <span>Give us a call <a href="tel:+1 561-372-8908">+1 561-372-8908</a></span>
+                            <br />
                             <div>
                                 <div id="fb-root"></div>
                                 <script>(function(d, s, id) {
@@ -296,7 +343,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="mainSlider" class="col-xl-6 col-12 order-xl-2" >
+                <div id="mainSlider" class="col-xl-6 col-12 order-xl-2">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -305,21 +352,21 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/slider-gt-products.png" alt="...">
+                                <img src="http://via.placeholder.com/1366x768" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3>img</h3>
                                     <p>img</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/slider-gt-storeopening.png" alt="...">
+                                <img src="http://via.placeholder.com/1366x768" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3>img</h3>
                                     <p>img</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/slider-gt-philosophy.png" alt="...">
+                                <img src="http://via.placeholder.com/1366x768" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3>img</h3>
                                     <p>img</p>
@@ -339,23 +386,28 @@
                 </div>
                 <div id="socialMedia" class="col-xl-3 col-12 order-3">
                     <div class="row">
-                            <div class="col-xl-12 col-6">
-                                <h1>
-                                    Adress
-                                </h1>
-                                <div class="">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                </div>
-                                <div>
-                                    <p>
-                                        149 N.E. Second Ave. 33444 Delray Beach
-                                    </p>
+                            <div class="sideBox col-xl-12 col-6">
+                                <h2>
+                                    Brotzeit
+                                </h2>
+                                <p>
+                                    ... sells homemade jams and baked goods inspired by traditional German cuisine and made with love.
+                                </p>
+                                <div class="row">
+                                    <div class="col-xl-6 col-12">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-xl-6 col-12">
+                                        <p>
+                                            149 N.E. Second Ave. <br />33444 Delray Beach
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-12 col-6">
-                                <h1>
-                                    Opening Hours: 
-                                </h1>
+                            <div class="sideBox col-xl-12 col-6">
+                                <h2>
+                                    Hours: 
+                                </h2>
                                 <table class="openHours">
                                     <tbody>
                                         <tr>
@@ -425,13 +477,13 @@
     <div id="bottomContainer" class="container-fluid">  
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
+                <a class="nav-link active" href="#">Policies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Imprint</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
