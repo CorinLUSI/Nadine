@@ -32,7 +32,8 @@
 <!-- CSS Styles -->
 
 <style type="text/css" >
-    @import url('https://fonts.googleapis.com/css?family=Lora');
+ 
+   @import url('https://fonts.googleapis.com/css?family=Lora');
     html,body {
         font-family: 'Lora', serif; !important
         line-height: 1.15;
@@ -50,28 +51,18 @@
         font-family: 'Lora', serif; !important
     }
     #topContainer {
-        position:fixed;
-        background: blue;
+        position:absolute;
+        background: none;
     }
     #midContainer {
-        background: red;
-        min-height: 80%;
-        min-height: 80vh;
-        height: 80%;
-        height: 80vh;
+        background: none;
     }
     #indexBody > #midContainer {
-        margin-top:15%;
-        margin-top:15vh;
-        padding-bottom:10%;
-        padding-bottom:10vh;
     }
     #bottomContainer {
         position: fixed;
-        background: yellow;
-        height: 5%;
-        height: 5vh;
-        bottom: 0%;
+        background: none;
+        display: none;
     }
     #topNavContainer {
         position: relative;
@@ -103,12 +94,249 @@
         z-index:1;
     }
     #navTop a {
-        margin-top: 120px;
+        margin-top: px;
         height: 100px;
     }
     a#treasureLogo {
+        margin-top: 0px;
+        height: 250px;
+        text-indent: -9999px;
+    }
+    .ribbon {                    
+        display:none;
+        font-family: arial, verdana;
+        font-size:24px;
+        text-transform:uppercase;
+        position:absolute;
+        color:#fff;
+    }
+    .ribbon:before {
+        content:"";
+        position:absolute;
+        border-width:70px 80px 70px 80px;
+        border-style:solid;
+        border-color:#3e1e57;
+        border-left-color:transparent;
+        border-right-color:#826697;
+        z-index:-1;
+    } 
+    .ribbon:after {
+        content:"";
+        position:absolute;
+        border-style:solid;
+        border-color:#3e1e57;
+        border-width:70px 80px 70px 80px;
+        border-right-color:transparent;
+        border-left-color:#826697;
+        z-index:-1;
+    }
+    #contactBox {
+        background: none;
+        min-height:100%;
+        height:600px;
+    }
+    #mainSlider {
+        background: none;
+        min-height:100%;
+        height:600px;
+        padding-top:15px;
+    }
+    #socialMedia {
+        min-height:100%;
+        height:600px;
+    }
+    .openHours {
+        width:100%;
+    }
+    .openHours td:nth-child(odd) {
+        text-align: left;
+    }
+    .openHours td:nth-child(even) {
+        text-align: right;
+    }
+    .contactIcons button {
+        margin:5px;
+    }
+    .contactIcons {
+        margin-bottom:10px;
+    }
+    .carousel-item img {
+        max-width: 1366px;
+        max-height: 768px;
+        width: 100%;
+        height:auto;
+    }
+    #treasureLogo {
+        background-image:url(img/grandmas-treasures-logo-shadow.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    #navbarToggler {
+    background: #f8f9fa;
+    }
+    @media (min-width: 576px) { 
+        #navbarToggler > div {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            
+        }
+        #navTop a#treasureLogo {
+            margin-top: 0px;
+            height: 180px;
+            text-indent: -9999px;
+            width: 100%;
+        }
+        #navTop a {
+            margin-top: 70px;
+            height: 100px;
+        }
+        #navTop.navbar {
+            height: 125px;
+        }
+        button.navbar-toggler {
+            float: left;
+            right: 50px;
+            top: 40px;
+            position: absolute;
+        }
+        #mainSlider {
+            background: none;
+            min-height:100%;
+            height:auto;
+            padding-top:0px;
+            margin-bottom:20px;
+        }
+        #centerContent {
+            position: absolute;
+            background: white;
+            height: 100%;
+            min-height: auto;
+            max-height: 100%;
+            width: 100%;
+        }
+        #contactBox {
+            background: none;
+            min-height: 100%;
+            height: auto;
+        }
+        #socialMedia {
+            background: none;
+            min-height: 100%;
+            height: auto;
+        }
+    }
+    @media (min-width: 768px) { 
+        #navTop a#treasureLogo {
+            margin-top: 0px;
+            height: 200px;
+            text-indent: -9999px;
+            width: 20%;
+        }
+        #navTop a {
+            margin-top: 70px;
+            height: 100px;
+        }
+        #navTop.navbar {
+            height: 100px;
+            padding:0;
+        }
+        button.navbar-toggler {
+            float: left;
+            right: 50px;
+            top: 90px;
+            position: absolute;
+        }
+        #navbarToggler {
+            background: none;
+        }
+        #mainSlider {
+        background: none;
+        min-height:100%;
+        height:auto;
+        padding-top:0px;
+    }
+    }
+    
+    @media (min-width: 1200px) {
+        html,body {
+        line-height: 1.15;
+        height: 100%;
+        min-height:auto;
+        max-height:100%;
+        width: 100%;
+        min-width:auto;
+        max-width:100%;
+    }
+    #indexBody .container-fluid {
+        padding:0;
+        font-family: 'Lora', serif; !important
+    }
+    #topContainer {
+        position:fixed;
+    }
+    #midContainer {
+        min-height: 80%;
+        min-height: 80vh;
+        height: 80%;
+        height: 80vh;
+    }
+    #indexBody > #midContainer {
+        margin-top:15%;
+        margin-top:15vh;
+        padding-bottom:10%;
+        padding-bottom:10vh;
+    }
+    #bottomContainer {
+        position: fixed;
+        background: yellow;
+        height: 5%;
+        height: 5vh;
+        bottom: 0%;
+        display:block;
+    }
+    #topNavContainer {
+        position: relative;
+    }
+    #centerContent {
+        position: relative;
+        height:100%;
+        min-height: auto;
+        max-height: 100%;
+        width:80%;
+        top:10%
+    }
+    #centerContent > .align-items-center {
+        min-height:800px;
+    }
+    #centerContent > .align-items-center > div > div .sideBox {
+        min-height: 320px;
+        background-color: #f6e0ec;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    #navTop.navbar {
+        width:100%;
+        position:absolute;
+    }
+    #navbarToggler > div {
+        width: 100% !important;
+        margin-left: 0%;
+        margin-right: 0%;        
+        }
+    #navTop {
+        z-index:1;
+    }
+    #navTop a {
+        margin-top: 120px;
+        height: 100px;
+    }
+    #navTop a#treasureLogo {
         margin-top: 70px;
         height: 250px;
+        text-indent: -9999px;
+        width:0%;
     }
     .ribbon {      
         background:#722ea6;                
@@ -150,18 +378,15 @@
         z-index:-1;
     }
     #contactBox {
-        background: green;
         min-height:100%;
         height:600px;
     }
     #mainSlider {
-        background: orange;
         min-height:100%;
         height:600px;
-        padding-top:15px;
+        padding-top:10px;
     }
     #socialMedia {
-        background: pink;
         min-height:100%;
         height:600px;
     }
@@ -187,16 +412,11 @@
         height:auto;
     }
     #treasureLogo {
-        background-image:url(img/grandmas-treasures-logo-shadow.png);
         height: 250px;
         text-indent: -9999px;
         width: 100px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
         margin-top: 70px;
     }
-    @media (min-width: 1200px) {
     #topContainer {
         height: 15%;
         height: 15vh;
@@ -227,90 +447,142 @@
     #centerContent > .align-items-center > div {
         height:700px;
     }
+    #navbarToggler {
+    background: none;
+    }
     }
     @media (max-width: 575px) { 
-        .carousel-item {
-            height:200px;
-        }
-        #centerContent {
+        html, body {
+            overflow: hidden;
+            overflow-y: auto;
             width:100%;
         }
-        #topContainer {
-            height:5%;
-            height:5vh;
+        #midContainer h2 {
+            font-size:1.6rem;
         }
-        #midContainer {
-            height:95%;
-            height:95vh;
+        p {
+            font-size:0.8rem;
         }
-        #contactBox {
-            height:25%;
-            height:40vh;
+        #treasureLogo {
+            height: 100px;
+            text-indent: -9999px;
+            width: 100px;
         }
         #mainSlider {
-            height:50%;
-            height:50vh;
+            background:none;
+            min-height:auto;
+            height:auto;
+            padding-top:0px;
+            margin-bottom:20px;
+            width:100%;
         }
-        #socialMedia{
-            height:25%;
-            height:5vh;
+        #indexBody > #midContainer {
+            background: none;
+            min-height: auto;
+            height: auto;
+            padding-bottom: auto;
+            width:100%;
+            position: absolute;
+            top:100px;
         }
-        #bottomContainer {
-            display:none;
+        #topContainer {
+            position: absolute;
+            background: none;
+            height: 200px;
+            min-height: auto;
+            top: 0;
+            left: 0;
+        }        
+        #topNavContainer {
+            position: absolute;
+            background: none;
+        }
+        #navTop.navbar {
+            width: 100%;
+            position: absolute;
+            height: auto;
+            max-height: auto;
+            height: 100px;
+            padding: 0px;
+        }
+        #navTop a#treasureLogo {
+            margin-top:auto;
+            height:100px;
+            text-indent: -9999px;
+            width: 30%;
         }
         #navTop a {
-        margin-top: 0px;
-        height: 30px;
+            margin-top: auto;
+            height: auto;
+        }
+        .ribbon {      
+            display:none;
+        }
+        .ribbon:before {
+            display:none;
+        } 
+        .ribbon:after {
+            display:none;
+        }
+        #contactBox {
+            background: none;
+            min-height: auto;
+            height: auto;
+        }
+        #socialMedia {
+            background: none;
+            min-height: auto;
+            height: auto;
+        }
+        #centerContent {
+            position: absolute;
+            background: none;
+            height: auto;
+            min-height: auto;
+            max-height: 100%;
+            width: 100%;
+            top: auto;
+            margin-top: auto;
+        }
+        #centerContent > .align-items-center > div > div .sideBox {
+            min-height: auto;
+            background-color: #f6e0ec;
+            padding-top: 10px;
+            margin-bottom: 0px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        #navbarToggler {
+            min-height:100%;
+            height:100vh;
+            padding-top:20px;
+        }
+        #indexBody .container-fluid {
+            margin-left:0px;
+            margin-right:0px;
+        }
+        #bottomContainer {
+            position: fixed;
+            background: yellow;
+            height: 5%;
+            height: 5vh;
+            bottom: 0%;
+            display:none;
+        }
+        #fbEmbed {
+            display:none;
         }
     }
     @media (max-width: 1199px) { 
-        #centerContent {
-            width:100%;
-        }
-        #topContainer {
-            height:250px;
-            height:20vh;
-        }
-        #midContainer {
-            height:75%;
-            height:75vh;
-        }
-        #contactBox {
-            height:25%;
-            height:25vh;
-        }
-        #mainSlider {
-            height:25%;
-        }
-        #socialMedia{
-            height:25%;
-            height:25vh;
-        }
         #bottomContainer {
-            height:5%;
-            height:5vh;
-        }
-        .ribbon {
-            display:none;
-        }
-        #treasureLogo.d-xl-none {
-           float: left;
-            width: 50%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 250px;
-            margin-top:0px;
-        }
-        .navbar-collapse {
-            float: left;
-            width: 50%;
-            position: absolute;
-            right: 0;
-            top: 20px;
-        }
+        position: fixed;
+        background: yellow;
+        height: 5%;
+        height: 5vh;
+        bottom: 0px;
     }
-
+    }
+    
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
@@ -319,19 +591,25 @@
 <body id="indexBody">
     <div id="topContainer" class="container-fluid">
         <div id="topNavContainer" class="container-fluid">
-            <nav id="navTop" class="navbar navbar-expand-xl">
-                <a id="treasureLogo" class="nav-item nav-link d-xl-none order-first" href="#">Home</a>
-                <div class="navbar-collapse">
+            <nav id="navTop" class="navbar navbar-expand-md navbar-light bg-light">
+                <a id="treasureLogo" class="d-xl-none d-lg-none d-md-none order-first navbar-brand" href="#">Home</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="navbar-collapse collapse" id="navbarToggler">
                     <div class="navbar-nav nav-fill w-100">
-                        <a id="treasureLogo" class="nav-item nav-link d-none d-xl-block order-3" href="#">Home</a>
+                        <a id="treasureLogo" class="nav-item nav-link d-none d-md-block d-lg-block d-xl-block order-3" href="#">Home</a>
                         <a class="nav-item nav-link active order-1" href="#">Products<span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link order-2" href="#">Philosophy</a>
                         <a class="nav-item nav-link order-4" href="#">Store</a>
                         <a class="nav-item nav-link disabled order-5" href="#">Shop</a>
+                        <a class="nav-item nav-link d-xl-none d-lg-none d-md-none order-6" href="#">Contact</a>
+                        <a class="nav-item nav-link d-xl-none d-lg-none d-md-none order-7" href="#">Policies</a>
+                        <a class="nav-item nav-link d-xl-none d-lg-none d-md-none order-8" href="#">Imprint</a>
                     </div>
                 </div>
             </nav>
-            <div class="ribbon">
+            <div class="ribbon d-xs-none">
             </div>
         </div>
     </div>
@@ -369,7 +647,7 @@
                             </div>
                             <span>Give us a call <a href="tel:+1 561-372-8908">+1 561-372-8908</a></span>
                             <br />
-                            <div>
+                            <div id="fbEmbed">
                                 <div id="fb-root"></div>
                                 <script>(function(d, s, id) {
                                         var js, fjs = d.getElementsByTagName(s)[0];
@@ -518,7 +796,7 @@
             </div>
         </div>
     </div>
-    <div id="bottomContainer" class="container-fluid">  
+    <div id="bottomContainer" class="container-fluid d-xs-none">  
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Policies</a>
