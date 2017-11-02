@@ -89,9 +89,6 @@
     #centerContent > .align-items-center {
         min-height:800px;
     }
-    #centerContent > .align-items-center > div {
-        height:700px;
-    }
     #centerContent > .align-items-center > div > div .sideBox {
         min-height: 320px;
         background-color: #f6e0ec;
@@ -156,8 +153,6 @@
         background: green;
         min-height:100%;
         height:600px;
-        padding-left:60px; 
-        padding-right:30px;
     }
     #mainSlider {
         background: orange;
@@ -169,8 +164,6 @@
         background: pink;
         min-height:100%;
         height:600px;
-        padding-left:30px; 
-        padding-right:60px;
     }
     .openHours {
         width:100%;
@@ -223,6 +216,17 @@
     #navTop .navbar-nav {
         height: 250px;
     }
+    #contactBox {
+        padding-left:60px; 
+        padding-right:30px;
+    }
+    #socialMedia {
+        padding-left:30px; 
+        padding-right:60px;
+    }
+    #centerContent > .align-items-center > div {
+        height:700px;
+    }
     }
     @media (max-width: 575px) { 
         .carousel-item {
@@ -254,6 +258,10 @@
         #bottomContainer {
             display:none;
         }
+        #navTop a {
+        margin-top: 0px;
+        height: 30px;
+        }
     }
     @media (max-width: 1199px) { 
         #centerContent {
@@ -273,7 +281,6 @@
         }
         #mainSlider {
             height:25%;
-            height:25vh;
         }
         #socialMedia{
             height:25%;
@@ -283,29 +290,25 @@
             height:5%;
             height:5vh;
         }
-        #navTop a {
-        margin-top: 0px;
-        height: 50px;
-        }
         .ribbon {
             display:none;
         }
         #treasureLogo.d-xl-none {
            float: left;
-            width: 30%;
+            width: 50%;
             position: absolute;
             left: 0;
             top: 0;
-            height: 250px; 
+            height: 250px;
+            margin-top:0px;
         }
         .navbar-collapse {
             float: left;
-            width: 70%;
+            width: 50%;
             position: absolute;
             right: 0;
             top: 20px;
         }
-        
     }
 
 </style>
@@ -337,7 +340,7 @@
             <div class="row align-items-center">
                 <div id="contactBox" class="col-xl-3 col-12 order-2">
                     <div class="row">
-                        <div class="sideBox col-xl-12 col-6">
+                        <div class="sideBox col-xl-12 col-md-6 col-xs-12">
                             <h2>
                                 Grandma's Treasures
                             </h2>
@@ -346,7 +349,7 @@
                             </p>
                             <p> Have a taste of our freshly made products at "Brotzeit" our local german <a href="store.html">bakery</a></p>
                         </div>
-                        <div class="sideBox col-xl-12 col-6">
+                        <div class="sideBox col-xl-12 col-xs-12 col-md-6">
                             <h2>
                                 Contact
                             </h2>
@@ -427,7 +430,7 @@
                 </div>
                 <div id="socialMedia" class="col-xl-3 col-12 order-3">
                     <div class="row">
-                            <div class="sideBox col-xl-12 col-6">
+                            <div class="sideBox col-xl-12 col-xs-12 col-md-6">
                                 <h2>
                                     Brotzeit
                                 </h2>
@@ -445,7 +448,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sideBox col-xl-12 col-6">
+                            <div class="sideBox col-xl-12 col-xs-12 col-md-6">
                                 <h2>
                                     Hours: 
                                 </h2>
