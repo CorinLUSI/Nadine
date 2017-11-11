@@ -464,6 +464,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
+    <script src="js/viewport-units-buggyfill.js"></script>
+    <script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+        window.onresize = function(){
+        document.body.height = window.innerHeight;
+        }
+        window.onresize(); // called to initially set the height.
+    </script>
 
 
     <!-- JS Bootstrap -->
