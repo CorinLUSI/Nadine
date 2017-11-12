@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html id="gt">
+
+<head>
+
+    <!-- Regular MetaData for SEO -->
+
+    <title>Grandma's Treasures - Farm inspired recipes | Home </title>
+    <meta charset="utf-8">
+    <!-- html5 version of http-equiv="Content-Type"... -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <link rel="author" href="https://plus.google.com/{{googlePlusId}}" />
+    <link rel="canonical" href="{{pageUrl}}" />
+
+    <!-- Facebook Metadata -->
+
+    <meta property="og:url" content="{{pageUrl}}">
+    <meta property="og:image" content="{{imageUrl}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:title" content="{{pageTitle}}">
+    <meta property="og:site_name" content="{{siteTitle}}">
+    <meta property="og:see_also" content="{{homepageUrl}}">
+
+    <!-- Twitter Metadata -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{pageUrl}}">
+    <meta name="twitter:title" content="{{pageTitle}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{imageUrl}}">
+
+    <!-- CSS Styles -->
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:800');
+        html {
+            font-size: 16px;
+        }
+        
+        /* Modern browsers only need this one */
+
+        @media screen and (min-width: 25em) {
+            html {
+                font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+            }
+        }
+
+        /* Safari <8 and IE <11 */
+
+        @media screen and (min-width: 25em) {
+            html {
+                font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+            }
+        }
+
+        @media screen and (min-width: 50em) {
+            html {
+                font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+            }
+        }
+        
+        body { 
+            left: 0;
+            bottom: 0vh;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            line-height: 1.4;
+            color:black;
+        
+        }
+        
+        p {
+            font-family: 'Merriweather', serif;
+            font-size: 0.875rem;
+            text-align: justify;
+        }
+        #gt h1,
+        #gt h2,
+        #gt h3,
+        #gt h4,
+        #gt h5,
+        #gt h6 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        #gt a {
+            color: black;
+            text-decoration:none;
+        }
+        #gt a:hover {
+        }
+        .content {
+            margin: 1.5vh 3vw 0 3vw;
+        }
+        .black-div {
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+        }
+        .blue-div {
+            top: 100vh;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            background-color: black;
+            bottom: 0;
+            right: 0;
+            background-image: url(img/about-mobile.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .green-div {
+            top: 200vh;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            background-color: green;
+            bottom: 0;
+            right: 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: color-burn;
+            background-image: url(img/philosophy-mobile.jpg);
+        }
+        .red-div {
+            top: 300vh;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            background-color: white;
+            bottom: 0;
+            right: 0;
+        }
+        .grey-div {
+            top: 400vh;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            background-color: white;
+            bottom: 0;
+            right: 0;
+        }
+        .arrow {
+            bottom: 0;
+            width: 100%;
+            position: relative;
+            top: 0%;
+            background: linear-gradient(to top, white, transparent);
+            height: 100vh;
+        }
+        #grey .contact-info .fa {
+            padding: 2rem;
+            width: 8rem;
+            text-align: center;
+            text-decoration: none;
+            margin: 0.5rem 0.5rem;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            height: 8rem;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 4rem;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .arrow .fa {
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 4rem;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            bottom: 15%;
+        }
+        .contact-box {
+            text-align: center;
+        }
+        #main-logo source,
+        #main-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        #main-logo-container {
+            z-index:9999;
+            position: absolute;
+        }
+        #main-slider {
+            position: absolute;
+            top: 0vh;
+            left: 0;
+            z-index: 0;
+            text-decoration: none;
+        }
+
+        #main-slider img {}
+
+        #main-slider .carousel-control-next-icon {
+            width: 80px;
+            height: 80px;
+            margin-top: 200px;
+        }
+
+        #main-slider .carousel-control-prev-icon {
+            width: 80px;
+            height: 80px;
+            margin-top: 200px;
+        }
+
+        #main-slider .carousel-caption {
+            top: 20vh;
+            bottom: 0vh;
+            min-height: 10vh;
+            max-height: 30vh;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            text-decoration: none;
+            width: 70vw;
+            margin-left: 15vw;
+            margin-right: 15vw;
+            left: 0;
+            right: 0;
+        }
+        
+        #main-slider p {
+            text-align:center;
+        }
+        
+        #main-slider .carousel-caption:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+
+    </script>
+</head>
+
+<body id="gt">
+    <header>
+    </header>
+    <section>
+        <div class="black-div" id="black">
+            <h1>
+                <a href="grandma.html">
+                    <div id="main-logo-container">
+                        <picture id="main-logo">
+                            <source media="(max-width: 575px)" srcset="img/gt-logo-mobile.png" sizes="100vw">
+                            <img src="img/grandmas-treasures-logo-shadow.png" alt="" title="" />
+                        </picture>
+                    </div>
+                </a>
+            </h1>
+            <div id="main-slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="">
+                            <img class="d-block w-100" src="img/berry-cake-portrait.png" alt="First slide">
+                        </picture>
+                        <div class="carousel-caption d-block">
+                            <a href="#">
+                                <h4>Homemade Delights</h4>
+                                <p>Enjoy our delicious Jams, Syrups & Pastries</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="">
+                            <img class="d-block w-100" src="img/berry-cake-portrait.png" alt="First slide">
+                        </picture>
+                        <div class="carousel-caption d-block">
+                            <a href="#">
+                                <h4>In memory of my Grandma</h4>
+                                <p>The Philosophy behind our products</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="">
+                            <img class="d-block w-100" src="img/berry-cake-portrait.png" alt="First slide">
+                        </picture>
+                        <div class="carousel-caption d-block">
+                            <a href="">
+                                <h4>New Store Opening</h4>
+                                <p>Visit our local bakery in Delray Beach</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+            </div>
+            <a href="#blue">
+                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="blue-div" id="blue">
+            <div class="content">
+                <h2>Authentic Food</h2>
+                <p class="paragraph">Grandma's Treasures dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more, all made with love.</p>
+                <p class="paragraph" >Have a look at our <a href="#" style="font-weight: bold;">products</a></p>
+            </div>
+            <a href="#green">
+                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="green-div" id="green">
+            <div class="content">
+                <h2>Our Philosophy</h2>
+                <p class="paragraph">Back then in Frankfurt, Grandma Helga magically created delicious jellies, cakes, cookies, and several other treats - all of them with that unforgettable taste that brought you back to the golden days.</p>
+                <p class="paragraph">Being brought up by my grandparents I was allowed to collect those wonderful experiences as a child and still love remembering and dreaming about those amazing times.</p>
+                <p class="paragraph">I created this company to share with you my one-of-a-kind collection of old German delights, which is a tribute of my love for the recipes of my childhood.</p>
+            </div>
+            <a href="#red">
+                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="red-div" id="red">
+            <div class="content">
+                <h2>Store</h2>
+                <p class="paragraph">Visit our german style bakery "Brotzeit" in Delray Beach and have a taste of the delicious and authentic variety that we offer</p>
+                <table style="width:100%;">
+                    <tr>
+                        <td style="font-weight: 900; text-align:left; width:40%; vertical-align: top;">Opening Hours</td>
+                        <td style="text-align:right; font-weight: normal;">Mon. - Sun. 08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 900; text-align:left; width:40%; vertical-align: top;">Our Location</td>
+                        <td style="text-align:right; font-weight: normal;"> 
+                            <div itemscope itemtype="http://schema.org/ContactPoint" class="vcard">
+                                <span itemscope itemtype="schema.org/PostalAddress" class="adr">
+                                    <span itemprop="streetAddress" class="street-address">149 N.E. Second Ave.</span>
+                                    <span itemprop="addressLocality" class="locality">Delray Beach</span>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="store-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <a href="#grey">
+                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="grey-div" id="grey">
+            <div class="content">
+                <h2>Contact</h2>
+                <p>dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more. </p>
+                <div class="contact-box">
+                <span class="contact-info">
+                    <a href="mailto:info@grandmas-treasures.io"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></a>
+                    <a href="tel:8984982"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                </span>
+                <span class="contact-info">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </span>
+                </div>
+            </div>
+            <a href="#black">
+                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
+
+
+    <!-- JS Bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
