@@ -38,7 +38,7 @@
         html {
             font-size: 16px;
         }
-        
+
         /* Modern browsers only need this one */
 
         @media screen and (min-width: 25em) {
@@ -60,23 +60,26 @@
                 font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
             }
         }
-        
-        body { 
+
+        #gt body {
             left: 0;
             bottom: 0vh;
             position: absolute;
             width: 100%;
             height: 100%;
             line-height: 1.4;
-            color:black;
-        
+            color: black;
+
         }
-        
-        p {
+
+        #gt p {
             font-family: 'Merriweather', serif;
             font-size: 0.875rem;
             text-align: justify;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
         }
+
         #gt h1,
         #gt h2,
         #gt h3,
@@ -86,15 +89,27 @@
             font-family: 'Montserrat', sans-serif;
             text-align: center;
         }
+
         #gt a {
             color: black;
-            text-decoration:none;
+            text-decoration: none;
         }
-        #gt a:hover {
+
+        #gt a:hover {}
+        
+        #gt table {
+            font-family: 'Merriweather', serif;
+            font-size: 0.875rem;
         }
+        
+        #gt section {
+            height:100%;
+        }
+
         .content {
             margin: 1.5vh 3vw 0 3vw;
         }
+
         .black-div {
             top: 0;
             left: 0;
@@ -103,21 +118,23 @@
             bottom: 0;
             right: 0;
         }
+
         .blue-div {
-            top: 100vh;
+            top: 100%;
             left: 0;
             position: absolute;
             height: 100%;
-            background-color: black;
+            background-color: white;
             bottom: 0;
             right: 0;
             background-image: url(img/about-mobile.jpg);
             background-position: center;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
         }
+
         .green-div {
-            top: 200vh;
+            top: 200%;
             left: 0;
             position: absolute;
             height: 100%;
@@ -132,8 +149,9 @@
             background-blend-mode: color-burn;
             background-image: url(img/philosophy-mobile.jpg);
         }
+
         .red-div {
-            top: 300vh;
+            top: 300%;
             left: 0;
             position: absolute;
             height: 100%;
@@ -141,8 +159,14 @@
             bottom: 0;
             right: 0;
         }
+        
+        .red-div.content {
+            height: 50%;
+            position: absolute;
+        }
+
         .grey-div {
-            top: 400vh;
+            top: 400%;
             left: 0;
             position: absolute;
             height: 100%;
@@ -150,14 +174,13 @@
             bottom: 0;
             right: 0;
         }
+
         .arrow {
             bottom: 0;
-            width: 100%;
-            position: relative;
-            top: 0%;
-            background: linear-gradient(to top, white, transparent);
-            height: 100vh;
+            position: absolute;
+            left: calc(50% - 2rem);
         }
+
         #grey .contact-info .fa {
             padding: 2rem;
             width: 8rem;
@@ -175,10 +198,11 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         .fa:hover {
             opacity: 0.7;
         }
-        
+
         .arrow .fa {
             width: 100%;
             text-align: center;
@@ -186,29 +210,63 @@
             color: black;
             display: inline-block;
             font: normal normal normal 14px/1 FontAwesome;
-            font-size: 4rem;
+            font-size: 2rem;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             position: absolute;
-            bottom: 15%;
+            bottom: 10%;
         }
+
+        .arrow .fa:hover {
+            font-size: 2.5rem;
+            opacity: 1;
+            bottom: 8%;
+        }
+
+        .arrow .fa.white {
+            color: white;
+        }
+
+        .arrow-bg {
+            width: 4rem;
+            height: 4rem;
+            border-top-left-radius: 4rem;
+            border-top-right-radius: 4rem;
+            border-color: black;
+            background-color: black;
+        }
+        
+        .arrow-bg.white-bg {
+            border-color: white;
+            background-color: white;
+        }
+        
+        .fa-chevron-right {
+            display:none;
+        }
+
         .contact-box {
             text-align: center;
         }
+
         #main-logo source,
         #main-logo img {
             width: 100%;
             height: auto;
+            vertical-align: unset;
+            top: 0;
         }
 
         #main-logo-container {
-            z-index:9999;
+            z-index: 9999;
             position: absolute;
+            width:100%;
         }
+
         #main-slider {
             position: absolute;
-            top: 0vh;
+            top: 0;
             left: 0;
             z-index: 0;
             text-decoration: none;
@@ -217,39 +275,104 @@
         #main-slider img {}
 
         #main-slider .carousel-control-next-icon {
+            display:none;
+/*
             width: 80px;
             height: 80px;
             margin-top: 200px;
+*/
         }
 
         #main-slider .carousel-control-prev-icon {
-            width: 80px;
-            height: 80px;
-            margin-top: 200px;
+            display:none;
         }
 
         #main-slider .carousel-caption {
-            top: 20vh;
-            bottom: 0vh;
-            min-height: 10vh;
-            max-height: 30vh;
-            background-color: rgba(255, 255, 255, 0.8);
+            top: 20%;
+            bottom: 0%;
+            min-height: 10%;
+            max-height: 30%;
+            background-color: rgba(255, 255, 255, 0.5);
             text-align: center;
             text-decoration: none;
-            width: 70vw;
-            margin-left: 15vw;
-            margin-right: 15vw;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
             left: 0;
             right: 0;
         }
-        
+
         #main-slider p {
-            text-align:center;
+            text-align: center;
         }
-        
+
         #main-slider .carousel-caption:hover {
             background-color: rgba(255, 255, 255, 0.8);
         }
+        #adress {
+            display:none;
+        }
+        .store-map {
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            width:100%;
+            height:50%;
+        }
+        .store-map iframe {
+            height:100%;
+        }
+        
+        @media only screen and (orientation: landscape) {
+        #main-slider .carousel-caption {
+            top: 0%;
+            bottom: 0%;
+            min-height: 100%;
+            max-height: 100%;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+            left: 0;
+            right: 0;
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top:15%;
+            padding-bottom:0;
+        }
+            #main-slider > .carousel-control-next, #main-slider > .carousel-control-prev {
+            display: block;
+                
+            }
+            #main-slider .carousel-control-prev-icon, #main-slider .carousel-control-next-icon {
+            margin-top: 5rem;   
+            }
+            .arrow {
+            left: calc(100% - 4rem);
+            transform: rotate(-90deg);
+            }
+            #red .paragraph {
+                display:none;
+            }
+        }
+        
+        
+        // Extra small devices (portrait phones, less than 576px)
+        // No media query since this is the default in Bootstrap
+
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) { ... }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { ... }
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) { ... }
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) { ... }
 
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -270,6 +393,7 @@
                 <a href="grandma.html">
                     <div id="main-logo-container">
                         <picture id="main-logo">
+                            <source media="(orientation: landscape)" srcset="img/gt-logo-mobile-landscape.png" sizes="100vw">
                             <source media="(max-width: 575px)" srcset="img/gt-logo-mobile.png" sizes="100vw">
                             <img src="img/grandmas-treasures-logo-shadow.png" alt="" title="" />
                         </picture>
@@ -325,7 +449,10 @@
                     </a>
             </div>
             <a href="#blue">
-                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-down white" aria-hidden="true"></i>
+                    <div class="arrow-bg"></div>
+                </div>
             </a>
         </div>
     </section>
@@ -334,10 +461,13 @@
             <div class="content">
                 <h2>Authentic Food</h2>
                 <p class="paragraph">Grandma's Treasures dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more, all made with love.</p>
-                <p class="paragraph" >Have a look at our <a href="#" style="font-weight: bold;">products</a></p>
+                <p class="paragraph">Have a look at our <a href="#" style="font-weight: bold;">products</a></p>
             </div>
             <a href="#green">
-                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-down white" aria-hidden="true"></i>
+                    <div class="arrow-bg"></div>
+                </div>
             </a>
         </div>
     </section>
@@ -350,7 +480,11 @@
                 <p class="paragraph">I created this company to share with you my one-of-a-kind collection of old German delights, which is a tribute of my love for the recipes of my childhood.</p>
             </div>
             <a href="#red">
-                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="arrow">
+
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <div class="arrow-bg white-bg"></div>
+                </div>
             </a>
         </div>
     </section>
@@ -361,16 +495,16 @@
                 <p class="paragraph">Visit our german style bakery "Brotzeit" in Delray Beach and have a taste of the delicious and authentic variety that we offer</p>
                 <table style="width:100%;">
                     <tr>
-                        <td style="font-weight: 900; text-align:left; width:40%; vertical-align: top;">Opening Hours</td>
-                        <td style="text-align:right; font-weight: normal;">Mon. - Sun. 08:00 - 20:00</td>
+                        <td style="font-weight: 900; text-align:left; width:50%; vertical-align: top;">Opening Hours</td>
+                        <td style="text-align:right; font-weight: normal;">Mon. - Sun.<br /> 08:00 - 20:00</td>
                     </tr>
-                    <tr>
-                        <td style="font-weight: 900; text-align:left; width:40%; vertical-align: top;">Our Location</td>
-                        <td style="text-align:right; font-weight: normal;"> 
+                    <tr id="adress">
+                        <td style="font-weight: 900; text-align:left; width:50%; vertical-align: top;">Our Location</td>
+                        <td style="text-align:right; font-weight: normal;">
                             <div itemscope itemtype="http://schema.org/ContactPoint" class="vcard">
                                 <span itemscope itemtype="schema.org/PostalAddress" class="adr">
                                     <span itemprop="streetAddress" class="street-address">149 N.E. Second Ave.</span>
-                                    <span itemprop="addressLocality" class="locality">Delray Beach</span>
+                                <span itemprop="addressLocality" class="locality">Delray Beach</span>
                                 </span>
                             </div>
                         </td>
@@ -378,10 +512,12 @@
                 </table>
             </div>
             <div class="store-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <a href="#grey">
-                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="arrow"><i class="fa fa-chevron-down white" aria-hidden="true"></i>
+                    <div class="arrow-bg"></div>
+                </div>
             </a>
         </div>
     </section>
@@ -389,20 +525,22 @@
         <div class="grey-div" id="grey">
             <div class="content">
                 <h2>Contact</h2>
-                <p>dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more. </p>
+                <p></p>
                 <div class="contact-box">
-                <span class="contact-info">
+                    <span class="contact-info">
                     <a href="mailto:info@grandmas-treasures.io"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></a>
                     <a href="tel:8984982"><i class="fa fa-phone" aria-hidden="true"></i></a>
                 </span>
-                <span class="contact-info">
+                    <span class="contact-info">
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </span>
                 </div>
             </div>
             <a href="#black">
-                <div class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="arrow"><i class="fa fa-chevron-up white" aria-hidden="true"></i>
+                    <div class="arrow-bg"></div>
+                </div>
             </a>
         </div>
     </section>
