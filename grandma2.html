@@ -928,8 +928,8 @@
 
         @media (min-width: 1600px) {
             #main-slider {
-                width: 50%;
-                height: 50%;
+                width: 45%;
+                height: 45%;
                 margin: auto;
                 right: 0;
                 bottom: 0;
@@ -944,10 +944,25 @@
                 height: 100%;
                 width: 100%;
                 position: absolute;
-                background-image: url(img/bg-applepie2.png);
+                background-image: url(img/bg-applepie-large.png);
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+            }
+            #main-logo-container {
+                width: 12%;
+                margin-left: 44%;
+                margin-right: 44%;
+            }
+            .ribbon {
+                width: 70%;
+                position: relative;
+                background: #b9daf4;
+                height: 100px;
+                margin: 40px auto;
+                display: block;
+                top: 2%;
+                z-index: 1;
             }
         }
 
@@ -984,39 +999,13 @@
                     <div class="carousel-item active">
                         <picture>
                             <source media="(max-width: 575px)" srcset="img/berry-cake-portrait-mobile.png">
-                            <source class="img-large" media="(orientation:landscape), (min-width: 1200px)" srcset="img/berry-cake-sm.png">
+                            <source class="img-large" media="(orientation:landscape), (min-width: 1200px)" srcset="img/berry-cake-md.png">
                             <img class="d-block" src="img/berry-cake-portrait.png" alt="First slide">
                         </picture>
                         <div class="carousel-caption d-block">
                             <a href="#">
                                 <h4>Homemade Delights</h4>
                                 <p>Enjoy our delicious Jams, Syrups & Pastries</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 575px)" srcset="img/berry-cake-portrait-mobile.png">
-                            <source class="img-large" media="(orientation:landscape), (min-width: 1200px)" srcset="img/berry-cake-sm.png">
-                            <img class="d-block" src="img/berry-cake-portrait.png" alt="First slide">
-                        </picture>
-                        <div class="carousel-caption d-block">
-                            <a href="#">
-                                <h4>In memory of my Grandma</h4>
-                                <p>The Philosophy behind our products</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <picture>
-                            <source media="(max-width: 575px)" srcset="img/berry-cake-portrait-mobile.png">
-                            <source class="img-large" media="(orientation:landscape), (min-width: 1200px)" srcset="img/berry-cake-sm.png">
-                            <img class="d-block" src="img/berry-cake-portrait.png" alt="First slide">
-                        </picture>
-                        <div class="carousel-caption d-block">
-                            <a href="">
-                                <h4>New Store Opening</h4>
-                                <p>Visit our local bakery in Delray Beach</p>
                             </a>
                         </div>
                     </div>
