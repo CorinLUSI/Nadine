@@ -2,6 +2,7 @@
 <html id="html-container">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
     <script>
@@ -10,6 +11,7 @@
 
     </script>
     <style type="text/css">
+        /*
         #html-container {
             margin: 0;
             padding: 0;
@@ -28,13 +30,28 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+*/
+
+        body {
+            max-width: 1680px;
+            margin: auto;
+        }
+
+        #html-container .footer {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            bottom: 0;
+            background: none;
+            max-width: 1680px;
+        }
 
         .wrapper {
             min-width: 1024px;
             min-height: 768px;
             max-width: 80%;
             max-height: 100%;
-            background: blue;
+            background: rgba(2, 2, 2, 0.5);
             margin: auto;
             position: relative;
             width: 80%;
@@ -44,7 +61,7 @@
         .navigation {
             width: 80%;
             height: 20%;
-            background: white;
+            background: rgba(255, 255, 255, 0.5);
             position: relative;
             margin: auto;
         }
@@ -52,16 +69,19 @@
         .content {
             width: 80%;
             height: 40%;
-            background: white;
+            background: rgba(77, 77, 77, 0.5);
             position: relative;
             margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         .content-box {
             width: calc(90% / 3);
             height: 100%;
             position: relative;
-            background: blue;
+            background: rgba(33, 33, 33, 0.5);
             float: left;
             margin: 0 calc(5% / 3);
         }
@@ -86,33 +106,164 @@
         .footer {
             height: 10%;
             position: relative;
-            background: green;
+            background: rgba(2, 2, 2, 0.5);
             width: 80%;
             margin: auto;
         }
+
+        .frontpage_square {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100%;
+        }
+
+        .frontpage_square img {
+            position: absolute;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+        .gm-logo {
+            min-width: 200px;
+            min-height: 200px;
+            max-width: 350px;
+            max-height: 350px;
+            width: calc(100vw / 4/5);
+            height: auto;
+            z-index: 100;
+            position: absolute;
+            left: calc(50% - 100px);
+            top: -10%;
+        }
+
+        /*
+        @ media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 1/2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    
+        }
+*/
 
     </style>
 </head>
 
 <body id="body-container">
-    <div class="wrapper">
-        <div class="navigation">
+    <div class="container-fluid">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-end">
+            <a class="navbar-brand m-auto d-block d-sm-none" href="#">
+    <img src="img/grandmas-treasures-logo-shadow.png" class="d-inline-block align-top gm-logo" alt="">
+  </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Philosophy</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a class="nav-link" href="#">GM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="nav-link" href="#">Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="row">
+            <div class="col-12 col-xl-4 col-md-12">
+                <picture>
+                    <source srcset="http://via.placeholder.com/1000x1000" media="(min-width: 992px) and (orientation: landscape)">
+                    <source srcset="http://via.placeholder.com/800x800" media="(min-width: 576px)">
+                    <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
+                </picture>
+            </div>
+            <div class="col-12 col-xl-4 d-none d-xl-block">
+                <picture>
+                    <source srcset="http://via.placeholder.com/1000x1000" media="(min-width: 992px) and (orientation: landscape)">
+                    <source srcset="http://via.placeholder.com/800x800" media="(min-width: 576px)">
+                    <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
+                </picture>
+            </div>
+            <div class="col-12 col-xl-4 d-none d-xl-block">
+                <picture>
+                    <source srcset="http://via.placeholder.com/1000x1000" media="(min-width: 992px) and (orientation: landscape)">
+                    <source srcset="http://via.placeholder.com/800x800" media="(min-width: 576px)">
+                    <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
+                </picture>
+            </div>
         </div>
-        <div class="content">
-            <div class="content-box"></div>
-            <div class="content-box"></div>
-            <div class="content-box"></div>
+        <div class="row card-group">
+            <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Special title treatment</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Special title treatment</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="info">
-            <div class="info-content"></div>
-            <div class="info-content"></div>
-        </div>
-        <div class="footer">
-        </div>
+
+
+
+
+        <footer class="footer">
+
+            <nav class="navbar navbar-dark bg-dark navbar-expand justify-content-center">
+                <div class="flex-column">
+                    <ul class="navbar-nav m-auto justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i>
+</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav m-auto justify-content-center">
+                        <li class="nav-item d-none d-xl-block">
+                            <a class="nav-link" href="#">Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </footer>
+
     </div>
-
-
-
 
 
 
