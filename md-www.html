@@ -35,12 +35,15 @@
         body {
             max-width: 1680px;
             margin: auto;
+            overflow: hidden;
+            overflow-y: auto;
+            width: 100%;
         }
 
         #html-container .footer {
             width: 100%;
             height: auto;
-            position: fixed;
+            position: relative;
             bottom: 0;
             background: none;
             max-width: 1680px;
@@ -103,14 +106,6 @@
             margin: 0 calc(3.5% / 2);
         }
 
-        .footer {
-            height: 10%;
-            position: relative;
-            background: rgba(2, 2, 2, 0.5);
-            width: 80%;
-            margin: auto;
-        }
-
         .frontpage_square {
             position: relative;
             overflow: hidden;
@@ -124,17 +119,39 @@
         .container-fluid {
             padding: 0;
         }
+
         .gm-logo {
-            min-width: 200px;
-            min-height: 200px;
-            max-width: 350px;
-            max-height: 350px;
-            width: calc(100vw / 4/5);
+            width: 48%;
+            margin: 0 26%;
             height: auto;
             z-index: 100;
             position: absolute;
-            left: calc(50% - 100px);
-            top: -10%;
+            left: 0;
+            top: 0;
+        }
+
+        #html-container .bg-dark {
+            background-color: darkred !important;
+        }
+
+        #navbar-top {
+            padding-top: 16%;
+        }
+
+        #navbar-top-toggle .navbar-nav {
+            margin: auto;
+            height: 100vh;
+            vertical-align: middle;
+            text-align: center;
+            margin-top: 24%;
+        }
+
+        @media (min-width: 768px) {
+
+            #html-container .footer {
+                position: fixed;
+            }
+
         }
 
         /*
@@ -153,14 +170,14 @@ only screen and (min-resolution: 2dppx) {
 
 <body id="body-container">
     <div class="container-fluid">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-end">
-            <a class="navbar-brand m-auto d-block d-sm-none" href="#">
+        <nav id="navbar-top" class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-end">
+            <a class="navbar-brand d-block d-sm-none" href="#">
     <img src="img/grandmas-treasures-logo-shadow.png" class="d-inline-block align-top gm-logo" alt="">
   </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-top-toggle" aria-controls="navbar-top-toggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+            <div class="collapse navbar-collapse justify-content-center" id="navbar-top-toggle">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
@@ -192,6 +209,13 @@ only screen and (min-resolution: 2dppx) {
                     <source srcset="http://via.placeholder.com/800x800" media="(min-width: 576px)">
                     <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
                 </picture>
+                <div class="card" style="top: -50vw; margin-bottom: -30vh;">
+                    <div class="card-body">
+                        <h4 class="card-title">Grandma's Treasures</h4>
+                        <p class="card-text">offers homemade jams and baked goods inspired by traditional German cuisine and made with love.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-xl-4 d-none d-xl-block">
                 <picture>
