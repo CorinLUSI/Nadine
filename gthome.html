@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html id="html-container">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f79d2fe334.js"></script>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+
+    </script>
+    <style type="text/css">
+        :root {
+            --highlight-color: #ef8379;
+        }
+
+        #html-container {
+            background: linear-gradient(to top right, #eacda3, #d6ae7b);
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: repeating-linear-gradient( to right,
+            rgba(214, 174, 123, 0.2),
+            rgba(214, 174, 123, 0.2) 30px,
+            rgba(255, 255, 255, 0.2) 30px,
+            rgba(255, 255, 255, 0.2) 110px);
+            background-blend-mode: multiply;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--highlight-color);
+        }
+
+        #html-container .footer {
+            width: 100%;
+            height: auto;
+            position: relative;
+            bottom: 0;
+            background: none;
+            max-width: 1680px;
+        }
+
+        .wrapper {
+            background: white;
+            max-width: 1200px;
+            height: 100%;
+            padding-top: 85px;
+            margin: auto;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .navigation {
+            width: 80%;
+            height: 20%;
+            background: rgba(255, 255, 255, 0.5);
+            position: relative;
+            margin: auto;
+        }
+
+        .content {
+            width: 80%;
+            height: 40%;
+            background: rgba(77, 77, 77, 0.5);
+            position: relative;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .content-box {
+            width: calc(90% / 3);
+            height: 100%;
+            position: relative;
+            background: rgba(33, 33, 33, 0.5);
+            float: left;
+            margin: 0 calc(5% / 3);
+        }
+
+        .info {
+            height: 30%;
+            width: 80%;
+            position: relative;
+            margin: auto;
+            background: red;
+        }
+
+        .info-content {
+            height: 100%;
+            width: calc(93% / 2);
+            position: relative;
+            float: left;
+            background: white;
+            margin: 0 calc(3.5% / 2);
+        }
+
+        .frontpage_square {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100%;
+        }
+
+        .frontpage_square img {
+            position: absolute;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .gm-logo {
+            width: 48%;
+            margin: 0 26%;
+            height: auto;
+            z-index: 100;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #html-container .bg-dark {
+            background-color: var(--highlight-color) !important;
+        }
+
+        @media (min-width: 576px) {
+            ...
+        }
+
+        @media (min-width: 768px) {
+            ...
+        }
+
+        @media (min-width: 992px) {
+            ...
+        }
+
+        @media (min-width: 1200px) {
+            #html-container .bg-dark {
+                height: 80px;
+            }
+            .main-img {
+                border-top: 0px hidden #ffffff;
+                border-right: 20px solid #ffffff;
+                border-bottom: 20px solid #ffffff;
+                border-left: 20px solid #ffffff;
+                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+                width: 960px;
+                height: 540px;
+            }
+        }
+
+    </style>
+</head>
+
+<body id="body-container">
+    <div class="wrapper">
+        <div class="container">
+            <nav id="navbar-top" class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-end">
+                <a class="navbar-brand d-block d-sm-none" href="#">
+    <img src="img/grandmas-treasures-logo-shadow.png" class="d-inline-block align-top gm-logo" alt="">
+  </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-top-toggle" aria-controls="navbar-top-toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbar-top-toggle">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Philosophy</a>
+                        </li>
+                        <li class="nav-item d-none d-sm-block">
+                            <a class="nav-link" href="#">GM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none">
+                            <a class="nav-link" href="#">Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <div class="row">
+                <div class="col-12 col-xl-12 col-md-12 text-center">
+                    <picture>
+                        <source srcset="http://via.placeholder.com/960x540" media="(min-width: 1200px)">
+                        <source srcset="http://via.placeholder.com/800x800" media="(min-width: 576px)">
+                        <img class="img-fluid main-img" srcset="http://via.placeholder.com/600x600" alt="…">
+                    </picture>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <h3>
+                        Farm inspired recipes
+                    </h3>
+                    <p>
+                        Grandma's Treasures dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more, all made with love. All recipes have been passed through generations and feature homemade, organic, fresh and farm-to-table ingredients.
+                    </p>
+                </div>
+                <div class="col-xl-6">
+                    <h3>
+                        German Bakery & Cafe
+                    </h3>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <p>
+                                Come by at Brotzeit our local Delray Beach Bakery and have a taste of the variety of delights that are freshly made every day.
+                            </p>
+                            <h5>
+                                Opening Hours
+                            </h5>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Tu. - Fr.</th>
+                                        <td>9am - 17pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sa.</th>
+                                        <td>9am - 16pm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="store-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.758830851416!2d-80.07098734181741!3d26.46350175642412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8dfc37063a721%3A0xf44f19ea6ae2042a!2s149+NE+2nd+Ave%2C+Delray+Beach%2C+FL+33444%2C+USA!5e0!3m2!1sde!2sde!4v1506958137991" width="200" height="114" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                            <h5>
+                                Adress
+                            </h5>
+                            <p>
+                                149 NE Second Ave Delray Beach, FL 33444
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+
+                <nav class="navbar navbar-dark bg-dark navbar-expand justify-content-center">
+                    <div class="flex-column">
+                        <ul class="navbar-nav m-auto justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i>
+</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav m-auto justify-content-center">
+                            <li class="nav-item d-none d-xl-block">
+                                <a class="nav-link" href="#">Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    <!-- JS Bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -133,17 +133,19 @@
         #html-container .bg-dark {
             background-color: darkred !important;
         }
-
-        #navbar-top {
-            padding-top: 16%;
-        }
-
+        
+        @media only screen and (max-width: 576px) {
         #navbar-top-toggle .navbar-nav {
             margin: auto;
             height: 100vh;
             vertical-align: middle;
             text-align: center;
             margin-top: 24%;
+        }
+        #navbar-top {
+            padding-top: 16%;
+        }
+            
         }
 
         @media (min-width: 768px) {
