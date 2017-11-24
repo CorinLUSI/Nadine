@@ -38,12 +38,22 @@
         #html-container>body {
             background: repeating-linear-gradient( to right,
             rgba(214, 174, 123, 0.2),
-            rgba(214, 174, 123, 0.2) 30px,
-            rgba(255, 255, 255, 0.2) 30px,
-            rgba(255, 255, 255, 0.2) 110px);
+            rgba(214, 174, 123, 0.2) 5%,
+            rgba(255, 255, 255, 0.2) 5%,
+            rgba(255, 255, 255, 0.2) 10%);
             background-blend-mode: multiply;
             width: 100%;
             font-family: 'Merriweather', serif;
+        }
+        
+        button {
+            background-color: var(--highlight);
+            color: white;
+        }
+        
+        button:hover {
+            background-color: var(--hover);
+            color: white;
         }
 
         a {
@@ -70,7 +80,19 @@
             font-size: 15px;
             margin-bottom: 0.1rem;
         }
-
+        
+        .nav-link {
+            color:white;
+        }
+        
+        .nav-link:hover {
+            color: var(--hover);
+        }
+        
+        #html-container .fa {
+            font-size: 25px;
+        }
+        
         #html-container .footer {
             width: 100%;
             height: auto;
@@ -78,6 +100,10 @@
             bottom: 0;
             background: none;
             max-width: 1680px;
+        }
+        
+        #html-container .footer .navbar-nav {
+            background-color: var(--highlight);
         }
 
         .wrapper {
@@ -159,8 +185,12 @@
             top: 0;
         }
 
-        #html-container .bg-dark {
-            background-color: var(--highlight) !important;
+        #html-container .footer .navbar {
+            background-color: white;
+        }
+        
+        #html-container #navbar-top {
+            background-color: var(--highlight);
         }
 
         table#opening-hours {
@@ -172,6 +202,11 @@
         table#opening-hours th {
             padding: 0;
             border: 0;
+        }
+        
+        table#opening-hours th {
+            font-weight: 400;
+
         }
 
         table#opening-hours td {
@@ -191,7 +226,7 @@
         }
 
         @media (min-width: 1200px) {
-            #html-container .bg-dark {
+            #html-container .navbar {
                 height: 80px;
             }
             .main-img {
@@ -200,8 +235,8 @@
                 border-bottom: 20px solid #ffffff;
                 border-left: 20px solid #ffffff;
                 box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
-                width: 960px;
-                height: 540px;
+                width: 1000px;
+                height: 560px;
             }
             h3 {
                 text-align: center;
@@ -238,16 +273,114 @@
                 border: thin solid var(--highlight);
             }
             #navbar-top {
-                z-index: 1;
-            }
-            .main-logo {
-                width: 278px;
-                height: auto;
-                top:-80px;
+                z-index: 2;
+                max-width: 1046px;
+                margin: auto;
                 position: relative;
+            }
+
+            .ribbon-container {
+                z-index: 0;
+                position: relative;
+                height: 0;
+                top: 85px;
+            }
+            .ribbon {
+                width: 1046px;
+                position: relative;
+                background: red;
+                height: 80px;
+                margin: auto;
+                min-width: 1046px;
+            }
+
+            .ribbon::before,
+            .ribbon::after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: -25px;
+                border: 40px solid #be7974;
+                z-index: -1;
+            }
+
+            .ribbon::before {
+                left: -55px;
+                border-right-width: 60px;
+                border-left-color: transparent;
+            }
+
+            .ribbon::after {
+                right: -55px;
+                border-left-width: 60px;
+                border-right-color: transparent;
+            }
+
+            .ribbon .ribbon-fold:before,
+            .ribbon .ribbon-fold:after {
+                content: "";
+                position: absolute;
+                display: block;
+                border-style: solid;
+                border-color: #9d4740 transparent transparent transparent;
+                bottom: -25px;
+            }
+
+            .ribbon .ribbon-fold:before {
+                left: 0;
+                border-width: 25px 0 0 25px;
+            }
+
+            .ribbon .ribbon-fold:after {
+                right: 0;
+                border-width: 25px 25px 0 0;
+            }
+
+
+            .main-logo {
+                width: 220px;
+                height: auto;
+                top: -85px;
+                position: relative;
+
             }
             #main-menu.navbar-nav {
                 height: 80px;
+            }
+            #main-menu .nav-item {
+                width: 18%;
+                font-weight: 300;
+                font-size: 17px;
+            }
+            #main-menu .nav-item:nth-of-type(3) {
+                width: 28%;
+            }
+            .bg-menu {
+                z-index: 0;
+                position: relative;
+                top: -128px;
+            }
+            .bg-menu-container {
+                top: 0px;
+                position: relative;
+                height: 0px;
+            }
+            #about-us {
+                background-image: url(img/wheat-left.png);
+                background-position: right;
+                background-repeat: no-repeat;
+                display: block;
+            }
+            #store-location {
+                background-image: url(img/wheat-right.png);
+                background-position: left;
+                background-repeat: no-repeat;
+                display: block;
+
+            }
+            .border-left {
+                border-left: 1px solid var(--highlight);
+                padding-left: 18px;
             }
         }
 
@@ -255,9 +388,17 @@
 </head>
 
 <body id="body-container">
+    <div class="ribbon-container">
+        <div class="ribbon">
+            <div class="ribbon-fold"></div>
+        </div>
+    </div>
     <div class="wrapper">
         <div class="container">
-            <nav id="navbar-top" class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-end">
+            <div class="text-center bg-menu-container">
+                <img class="bg-menu" src="img/bg-farm-green.png">
+            </div>
+            <nav id="navbar-top" class="navbar navbar-expand-lg justify-content-end">
                 <a class="navbar-brand d-block d-sm-none" href="#">
     <img src="img/grandmas-treasures-logo-shadow.png" class="d-inline-block align-top gm-logo" alt="">
   </a>
@@ -265,22 +406,22 @@
     <span class="navbar-toggler-icon"></span>
   </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbar-top-toggle">
-                    <ul id="main-menu" class="navbar-nav m-auto justify-content-center w-100">
-                        <li class="nav-item active m-auto ">
+                    <ul id="main-menu" class="navbar-nav m-auto justify-content-center w-100 text-center">
+                        <li class="nav-item active m-auto">
                             <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item m-auto ">
+                        <li class="nav-item m-auto">
                             <a class="nav-link" href="#">Philosophy</a>
                         </li>
-                        <li class="nav-item d-none d-sm-block m-auto ">
+                        <li class="nav-item d-none d-sm-block m-auto">
                             <h1>
-                            <a id="grandmas-treasures-logo" class="nav-link" title="Grandma's Treasures - Delray Beach, Florida" href="#"><img class="main-logo" alt="Grandma's Treasures - Authentic German Food, Farm inspired Recipes" src="img/gt-svg.svg"></a>
+                                <a id="grandmas-treasures-logo" class="nav-link" title="Grandma's Treasures - Delray Beach, Florida" href="#"><img class="main-logo" alt="Grandma's Treasures - Authentic German Food, Farm inspired Recipes" src="img/gt-svg.svg"></a>
                             </h1>
                         </li>
-                        <li class="nav-item m-auto ">
+                        <li class="nav-item m-auto">
                             <a class="nav-link" href="#">Store</a>
                         </li>
-                        <li class="nav-item m-auto ">
+                        <li class="nav-item m-auto">
                             <a class="nav-link disabled" href="#">Shop</a>
                         </li>
                         <li class="nav-item d-block d-sm-none m-auto">
@@ -301,15 +442,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-5 offset-xl-1">
+                <div id="about-us" class="col-xl-5 offset-xl-1">
                     <h3>
                         Farm inspired recipes
                     </h3>
                     <p class="paragraph">
                         Grandma's Treasures dishes up authentic German goods, including gourmet jams, cakes, pastries, bread, salty spreads, soups and more, all made with love. All recipes have been passed through generations and feature homemade, organic, fresh and farm-to-table ingredients.
                     </p>
+                    <div class="row text-center no-gutters p-4">
+                        <div class="col-xl-6 p-1">
+                            <button type="button" class="btn w-100">Products</button>
+                        </div>
+                        <div class="col-xl-6 p-1">
+                            <button type="button" class="btn w-100">Shop</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-5">
+                <div id="store-location" class="col-xl-5">
                     <h3>
                         German Bakery & Cafe
                     </h3>
@@ -327,7 +476,7 @@
                     </div>
                     <div class="row no-gutters">
                         <div class="col-xl-6">
-                            <div class="paragraph">
+                            <div class="paragraph right">
                                 <h5>
                                     Opening Hours
                                 </h5>
@@ -347,14 +496,16 @@
                         </div>
                         <div class="col-xl-6">
                             <div class="paragraph left">
-                                <h5>
-                                    Adress
-                                </h5>
-                                <address>
+                                <div class="border-left">
+                                    <h5>
+                                        Adress
+                                    </h5>
+                                    <address>
                                     149 NE Second Ave
                                     <br>     
                                     Delray Beach, FL 33444
                                 </address>
+                                </div>
                             </div>
 
                         </div>
@@ -364,7 +515,7 @@
 
             <footer class="footer">
 
-                <nav class="navbar navbar-dark bg-dark navbar-expand justify-content-center">
+                <nav class="navbar navbar-expand justify-content-center">
                     <div class="flex-column">
                         <ul class="navbar-nav m-auto justify-content-center">
                             <li class="nav-item">
