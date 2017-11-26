@@ -11,10 +11,6 @@
         document.createElement("picture");
 
     </script>
-    <style type="text/css">
-
-
-    </style>
 </head>
 
 <body id="body-container">
@@ -38,106 +34,235 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbar-top-toggle">
                     <ul id="main-menu" class="navbar-nav m-auto justify-content-center w-100 text-center">
                         <li class="nav-item active m-auto">
-                            <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                            <a class="nav-link btn" href="products-test.html">Products </a>
                         </li>
                         <li class="nav-item m-auto">
-                            <a class="nav-link" href="#">Philosophy</a>
+                            <a class="nav-link btn" href="philosophy-test.html">Philosophy</a>
                         </li>
                         <li class="nav-item d-none d-sm-block m-auto">
                             <h1>
-                                <a id="grandmas-treasures-logo" class="nav-link" title="Grandma's Treasures - Delray Beach, Florida" href="#"><img class="main-logo" alt="Grandma's Treasures - Authentic German Food, Farm inspired Recipes" src="img/gt-svg.svg"></a>
+                                <a id="grandmas-treasures-logo" class="nav-link" title="Grandma's Treasures - Delray Beach, Florida" href="gthome.html"><img class="main-logo" alt="Grandma's Treasures - Authentic German Food, Farm inspired Recipes" src="img/gt-png.png"><span class="sr-only">(current)</span></a>
                             </h1>
                         </li>
                         <li class="nav-item m-auto">
-                            <a class="nav-link" href="#">Store</a>
+                            <a class="nav-link btn" href="#">Store</a>
                         </li>
                         <li class="nav-item m-auto">
-                            <a class="nav-link disabled" href="#">Shop</a>
+                            <a class="nav-link disabled btn" href="#">Shop</a>
                         </li>
-                        <li class="nav-item d-block d-sm-none m-auto">
+                        <li class="nav-item d-block d-sm-none m-auto btn">
                             <a class="nav-link" href="#">Policy</a>
                         </li>
                     </ul>
                 </div>
 
             </nav>
+
             <div class="row">
                 <div class="col-xl-12 text-center mt-5 pt-5">
-                    <h1>Traditional Recipes with a modern twist</h1>
+                    <h1 class="mt-5">Traditional Recipes with a modern twist</h1>
                     <p class="lead">Discover the variety of our authentic and delicious Products</p>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-xl-2 offset-xl-1">
-                    <h2>
-                        Jams
-                    </h2>
+
+            <nav class="row mt-4 nav nav-tabs" id="myTab" role="tablist">
+                <a class="col-xl-2 offset-xl-1 nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <h2>Jams</h2>
                     <picture>
-                        <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
+                        <img class="img-fluid" srcset="img/product-jam-tile.png" alt="…">
                     </picture>
+                </a>
+                <a class="col-xl-2 nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    <h2>Cakes</h2>
+                    <picture>
+                        <img class="img-fluid" srcset="img/product-cake-tile.png" alt="…">
+                    </picture>
+                </a>
+                <a class="col-xl-2 nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    <h2>Spreads</h2>
+                    <picture>
+                        <img class="img-fluid" srcset="img/product-spread-tile.png" alt="…">
+                    </picture>
+                </a>
+                <a class="col-xl-2 nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-bread" role="tab" aria-controls="nav-bread" aria-selected="false">
+                    <h2>Breads</h2>
+                    <picture>
+                        <img class="img-fluid" srcset="img/product-bread-tile.png" alt="…">
+                    </picture>
+                </a>
+                <a class="col-xl-2 nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-syrup" role="tab" aria-controls="nav-syrup" aria-selected="false">
+                    <h2>Syrups</h2>
+                    <picture>
+                        <img class="img-fluid" srcset="img/product-syrup-tile.png" alt="…">
+                    </picture>
+                </a>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="row">
+                        <div class="col-xl-12 text-center mt-3">
+                            <h3>Handmade Jams</h3>
+                        </div>
+                        <div class="row mt-4 pb-4 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry-Rhubarb</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/strawberry-jam-tile.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4 pb-4 mb-5 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry-Rhubarb</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/strawberry-jam-tile.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-2">
-                    <h2>
-                        Cakes
-                    </h2>
-                    <picture>
-                        <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
-                    </picture>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="row">
+                        <div class="col-xl-12 text-center mt-3">
+                            <h3>Cakes</h3>
+                        </div>
+                        <div class="row mt-4 pb-4 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry Cake</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/strawberry-cake-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4 pb-4 mb-5 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry Cake</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/strawberry-cake-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-2">
-                    <h2>
-                        Spreads
-                    </h2>
-                    <picture>
-                        <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
-                    </picture>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row">
+                        <div class="col-xl-12 text-center mt-3">
+                            <h3>Spreads</h3>
+                        </div>
+                        <div class="row mt-4 pb-4 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Avocado Spread</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/avocado-spread-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4 pb-4 mb-5 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Avocado Spread</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/avocado-spread-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="col-xl-2">
-                    <h2>
-                        Breads
-                    </h2>
-                    <picture>
-                        <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
-                    </picture>
+                <div class="tab-pane fade" id="nav-bread" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row">
+                        <div class="col-xl-12 text-center mt-3">
+                            <h3>Breads</h3>
+                        </div>
+                        <div class="row mt-4 pb-4 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Dark Bread</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/bread-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4 pb-4 mb-5 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Dark Bread</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/bread-tile-product.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-2">
-                    <h2>
-                        Syrups
-                    </h2>
-                    <picture>
-                        <img class="img-fluid" srcset="http://via.placeholder.com/600x600" alt="…">
-                    </picture>
+                <div class="tab-pane fade" id="nav-syrup" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row">
+                        <div class="col-xl-12 text-center mt-3">
+                            <h3>Syrups</h3>
+                        </div>
+                        <div class="row mt-4 pb-4 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry Syrup</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/syrups-tile-products.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="row mt-4 pb-4 mb-5 product-container">
+                            <div class="col-xl-4 offset-xl-2 text-center">
+                                <h5>Strawberry Syrup</h5>
+                                <picture>
+                                    <img class="img-fluid mt-2" srcset="img/syrups-tile-products.png" alt="…">
+                                </picture>
+                            </div>
+                            <div class="col-xl-4">
+                                <p class="paragraph">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-xl-12 text-center mt-3">
-                    <h3>Handmade Jams</h3>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6">
-                        <picture>
-                            <img class="img-fluid" srcset="http://via.placeholder.com/200x200" alt="…">
-                        </picture>
-                    </div>
-                    <div class="col-xl-6">
-                        <p class="paragraph">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                </div>
-                <div class="col-xl-12">
-                </div>
-                <div class="col-xl-12">
-                </div>
-                <div class="col-xl-12">
-                </div>
-            </div>
 
             <footer class="footer">
 
                 <nav class="navbar navbar-expand justify-content-center">
+                    <div class="flex-column-before">
+                        <img src="img/wheat-ear-left-h.png">
+                    </div>
                     <div class="flex-column">
                         <div class="ribbon-bottom">
                             <div class="ribbon-folder">
@@ -161,10 +286,13 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav m-auto justify-content-center">
-                            <li class="nav-item d-none d-xl-block">
+                            <li class="nav-item d-none d-xl-block mt-1">
                                 <a class="" href="#">Policy</a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="flex-column-after">
+                        <img src="img/wheat-ear-right-h.png">
                     </div>
 
                 </nav>
@@ -180,6 +308,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

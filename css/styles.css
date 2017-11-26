@@ -1,415 +1,510 @@
       @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700|Montserrat:800|Great+Vibes');
-        :root {
-            --highlight: #ef8379;
-            --hover: #be7974;
-            font-size: 15px;
-        }
+      :root {
+          --highlight: #ef8379;
+          --hover: #be7974;
+          font-size: 15px;
+      }
 
-        #html-container {
-            background: linear-gradient(to top right, #eacda3, #d6ae7b);
-            width: 100%;
-            /* Adjust font size */
-            font-size: 100%;
-            -webkit-text-size-adjust: 100%;
-            /* Font varient */
-            font-variant-ligatures: none;
-            -webkit-font-variant-ligatures: none;
-            /* Smoothing */
-            text-rendering: optimizeLegibility;
-            -moz-osx-font-smoothing: grayscale;
-            font-smoothing: antialiased;
-            -webkit-font-smoothing: antialiased;
-            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-        }
+      #html-container {
+          background: linear-gradient(to top right, #eacda3, #d6ae7b);
+          width: 100%;
+          /* Adjust font size */
+          font-size: 100%;
+          -webkit-text-size-adjust: 100%;
+          /* Font varient */
+          font-variant-ligatures: none;
+          -webkit-font-variant-ligatures: none;
+          /* Smoothing */
+          text-rendering: optimizeLegibility;
+          -moz-osx-font-smoothing: grayscale;
+          font-smoothing: antialiased;
+          -webkit-font-smoothing: antialiased;
+          text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+      }
 
-        #html-container>body {
-            background: repeating-linear-gradient( to right,
-            rgba(214, 174, 123, 0.2),
-            rgba(214, 174, 123, 0.2) 5%,
-            rgba(255, 255, 255, 0.2) 5%,
-            rgba(255, 255, 255, 0.2) 10%);
-            background-blend-mode: multiply;
-            width: 100%;
-            font-family: 'Merriweather', serif;
-        }
+      #html-container > body {
+          background: repeating-linear-gradient( to right,
+          rgba(214, 174, 123, 0.2),
+          rgba(214, 174, 123, 0.2) 5%,
+          rgba(255, 255, 255, 0.2) 5%,
+          rgba(255, 255, 255, 0.2) 10%);
+          background-blend-mode: multiply;
+          width: 100%;
+          font-family: 'Merriweather', serif;
+      }
 
-        button {
-            background-color: var(--highlight);
-            color: white;
-        }
+      button {
+          background-color: var(--highlight);
+          color: white;
+      }
 
-        button:hover {
-            background-color: var(--hover);
-            color: white;
-        }
+      button:hover {
+          background-color: var(--hover);
+          color: white;
+      }
 
-        a {
-            color: var(--highlight);
-        }
+      .btn {
+          background-color: var(--highlight);
+          color: white;
+      }
 
-        a:hover {
-            color: var(--hover);
-            text-decoration: none;
-        }
+      .btn:hover {
+          background-color: var(--hover);
+          color: white;
+      }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: var(--highlight);
-            font-family: 'Great Vibes', cursive;
-        }
+      a.btn:hover {
+          color: white;
+      }
 
-        h5 {
-            color: var(--highlight);
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 0.1rem;
-        }
+      a {
+          color: var(--highlight);
+      }
 
-        .nav-link {
-            color: white;
-        }
+      a:hover {
+          color: var(--hover);
+          text-decoration: none;
+      }
 
-        .nav-link:hover {
-            color: var(--hover);
-        }
+      h1,
+      h2,
+      h3,
+      h4 {
+          color: var(--highlight);
+          font-family: 'Great Vibes', cursive;
+      }
 
-        .nav-link.invert {
-            color: var(--highlight);
-        }
+      h5 {
+          color: var(--highlight);
+          font-family: 'Merriweather', serif;
+          font-weight: 700;
+          font-size: 15px;
+          margin-bottom: 0.1rem;
+      }
 
-        .nav-link.invert {
-            color: var(--hover);
-        }
+      .nav-link {
+          color: white;
+      }
 
-        #html-container .fa {
-            font-size: 25px;
-        }
+      .nav-link:hover {
+          color: var(--hover);
+      }
 
-        #html-container .footer {
-            width: 100%;
-            height: auto;
-            position: relative;
-            bottom: 0;
-            background: none;
-            max-width: 1680px;
-        }
+      .nav-link.invert {
+          color: var(--highlight);
+      }
 
-        #html-container .footer .navbar-nav:first-of-type {
-            background-color: var(--highlight);
-        }
+      .nav-link.invert {
+          color: var(--hover);
+      }
 
-        .wrapper {
-            background: white;
-            max-width: 1200px;
-            height: 100%;
-            padding-top: 85px;
-            margin: auto;
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
-        }
+      #html-container .fa {
+          font-size: 25px;
+      }
 
+      #html-container .footer {
+          width: 100%;
+          height: auto;
+          position: relative;
+          bottom: 0;
+          background: none;
+          max-width: 1680px;
+      }
 
-        .navigation {
-            width: 80%;
-            height: 20%;
-            background: rgba(255, 255, 255, 0.5);
-            position: relative;
-            margin: auto;
-        }
+      #html-container .footer .navbar-nav:first-of-type {
+          background-color: var(--highlight);
+      }
 
-        .content {
-            width: 80%;
-            height: 40%;
-            background: rgba(77, 77, 77, 0.5);
-            position: relative;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .content-box {
-            width: calc(90% / 3);
-            height: 100%;
-            position: relative;
-            background: rgba(33, 33, 33, 0.5);
-            float: left;
-            margin: 0 calc(5% / 3);
-        }
-
-        .info {
-            height: 30%;
-            width: 80%;
-            position: relative;
-            margin: auto;
-            background: red;
-        }
-
-        .info-content {
-            height: 100%;
-            width: calc(93% / 2);
-            position: relative;
-            float: left;
-            background: white;
-            margin: 0 calc(3.5% / 2);
-        }
-
-        .frontpage_square {
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 100%;
-        }
-
-        .frontpage_square img {
-            position: absolute;
-        }
-
-        .container-fluid {
-            padding: 0;
-        }
-
-        .gm-logo {
-            width: 48%;
-            margin: 0 26%;
-            height: auto;
-            z-index: 100;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        #html-container .footer .navbar {
-            background-color: white;
-        }
-
-        #html-container #navbar-top {
-            background-color: var(--highlight);
-        }
-
-        table#opening-hours {
-            padding: 0;
-            border: 0;
-        }
-
-        table#opening-hours td,
-        table#opening-hours th {
-            padding: 0;
-            border: 0;
-        }
-
-        table#opening-hours th {
-            font-weight: 400;
-
-        }
-
-        table#opening-hours td {
-            text-align: right;
-        }
-
-        @media (min-width: 576px) {
-            ...
-        }
-
-        @media (min-width: 768px) {
-            ...
-        }
-
-        @media (min-width: 992px) {
-            ...
-        }
-
-        @media (min-width: 1200px) {
-            #html-container .navbar {
-                height: 80px;
-            }
-            #html-container .flex-column {
-                width: 250px;
-                height: 80px;
-                z-index: 5;
-            }
-            .main-img {
-                border-top: 0px hidden #ffffff;
-                border-right: 20px solid #ffffff;
-                border-bottom: 20px solid #ffffff;
-                border-left: 20px solid #ffffff;
-                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
-                width: 1000px;
-                height: 560px;
-            }
-            h3 {
-                text-align: center;
-                margin-top: 50px;
-                margin-bottom: 0px;
-                font-size: 36px;
-                line-height: 20px;
-            }
-            .paragraph {
-                padding: 24px 24px 0px 24px;
-                font-weight: 300;
-                line-height: 18px;
-                font-size: 15px;
-                text-align: justify;
-                word-spacing: -0.9px;
-                letter-spacing: -0.4px;
-                height: 114px;
-                margin-bottom: 12px;
-            }
-            .paragraph.right {
-                padding-right: 20px;
-            }
-            .paragraph.left {
-                padding-left: 0px;
-            }
+      .wrapper {
+          background: white;
+          max-width: 1200px;
+          height: 100%;
+          padding-top: 85px;
+          margin: auto;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+      }
 
 
-            .store-map {
-                padding-top: 24px;
-                width: 200px;
-                height: 114px;
-            }
-            .store-map>iframe {
-                border: thin solid var(--highlight);
-            }
-            #navbar-top {
-                z-index: 2;
-                max-width: 1046px;
-                margin: auto;
-                position: relative;
-            }
+      .navigation {
+          width: 80%;
+          height: 20%;
+          background: rgba(255, 255, 255, 0.5);
+          position: relative;
+          margin: auto;
+      }
 
-            .ribbon-container {
-                z-index: 0;
-                position: relative;
-                height: 0;
-                top: 85px;
-            }
-            .ribbon {
-                width: 1046px;
-                position: relative;
-                background: red;
-                height: 80px;
-                margin: auto;
-                min-width: 1046px;
-            }
+      .content {
+          width: 80%;
+          height: 40%;
+          background: rgba(77, 77, 77, 0.5);
+          position: relative;
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
 
-            .ribbon::before,
-            .ribbon::after {
-                content: "";
-                position: absolute;
-                display: block;
-                bottom: -25px;
-                border: 40px solid #be7974;
-                z-index: -1;
-            }
+      .content-box {
+          width: calc(90% / 3);
+          height: 100%;
+          position: relative;
+          background: rgba(33, 33, 33, 0.5);
+          float: left;
+          margin: 0 calc(5% / 3);
+      }
 
-            .ribbon::before {
-                left: -55px;
-                border-right-width: 60px;
-                border-left-color: transparent;
-            }
+      .info {
+          height: 30%;
+          width: 80%;
+          position: relative;
+          margin: auto;
+          background: red;
+      }
 
-            .ribbon::after {
-                right: -55px;
-                border-left-width: 60px;
-                border-right-color: transparent;
-            }
+      .info-content {
+          height: 100%;
+          width: calc(93% / 2);
+          position: relative;
+          float: left;
+          background: white;
+          margin: 0 calc(3.5% / 2);
+      }
 
-            .ribbon .ribbon-fold:before,
-            .ribbon .ribbon-fold:after {
-                content: "";
-                position: absolute;
-                display: block;
-                border-style: solid;
-                border-color: #9d4740 transparent transparent transparent;
-                bottom: -25px;
-            }
+      .frontpage_square {
+          position: relative;
+          overflow: hidden;
+          padding-bottom: 100%;
+      }
 
-            .ribbon .ribbon-fold:before {
-                left: 0;
-                border-width: 25px 0 0 25px;
-            }
+      .frontpage_square img {
+          position: absolute;
+      }
 
-            .ribbon .ribbon-fold:after {
-                right: 0;
-                border-width: 25px 25px 0 0;
-            }
+      .container-fluid {
+          padding: 0;
+      }
 
-            .ribbon-bottom {
-                width: auto;
-                position: absolute;
-                background: none;
-                height: 80px;
-                margin: auto;
-                min-width: auto;
-            }
+      .gm-logo {
+          width: 48%;
+          margin: 0 26%;
+          height: auto;
+          z-index: 100;
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
 
-            .ribbon-bottom::before,
-            .ribbon-bottom::after {
-                content: "";
-                position: absolute;
-                display: block;
-                bottom: 44px;
-                border: 15px solid #be7974;
-                z-index: -1;
-            }
+      #html-container .footer .navbar {
+          background-color: white;
+      }
 
-            .ribbon-bottom::after {
-                right: -275px;
-                border-left-width: 30px;
-                border-right-color: transparent;
-            }
+      #html-container #navbar-top {
+          background-color: var(--highlight);
+      }
 
-            .ribbon-bottom::before {
-                left: -25px;
-                border-right-width: 30px;
-                border-left-color: transparent;
-            }
+      table#opening-hours {
+          padding: 0;
+          border: 0;
+      }
 
-            .main-logo {
-                width: 220px;
-                height: auto;
-                top: -85px;
-                position: relative;
+      table#opening-hours td,
+      table#opening-hours th {
+          padding: 0;
+          border: 0;
+      }
 
-            }
-            #main-menu.navbar-nav {
-                height: 80px;
-            }
-            #main-menu .nav-item {
-                width: 18%;
-                font-weight: 300;
-                font-size: 17px;
-            }
-            #main-menu .nav-item:nth-of-type(3) {
-                width: 28%;
-            }
-            .bg-menu {
-                z-index: 0;
-                position: relative;
-                top: -128px;
-            }
-            .bg-menu-container {
-                top: 0px;
-                position: relative;
-                height: 0px;
-            }
-            #about-us {
-                background-image: url(../img/wheat-left.png);
-                background-position: right;
-                background-repeat: no-repeat;
-                display: block;
-            }
-            #store-location {
-                background-image: url(../img/wheat-right.png);
-                background-position: left;
-                background-repeat: no-repeat;
-                display: block;
+      table#opening-hours th {
+          font-weight: 400;
 
-            }
-            .border-left {
-                border-left: 1px solid var(--highlight);
-                padding-left: 18px;
-            }
-        }
+      }
+
+      table#opening-hours td {
+          text-align: right;
+      }
+
+      @media (min-width: 576px) {
+          ...
+      }
+
+      @media (min-width: 768px) {
+          ...
+      }
+
+      @media (min-width: 992px) {
+          ...
+      }
+
+      @media (min-width: 1200px) {
+          #html-container .navbar {
+              height: 80px;
+          }
+          #html-container .flex-column {
+              width: 250px;
+              height: 80px;
+              z-index: 5;
+          }
+
+          .flex-column-before {
+              position: absolute;
+              left: 70px;
+              bottom: 50px;
+          }
+
+          .flex-column-after {
+              position: absolute;
+              right: 70px;
+              bottom: 50px;
+
+          }
+          .main-img {
+              border-top: 0px hidden #ffffff;
+              border-right: 20px solid #ffffff;
+              border-bottom: 20px solid #ffffff;
+              border-left: 20px solid #ffffff;
+              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+              width: 1000px;
+              height: 560px;
+          }
+          .news-caption {
+              background: transparent;
+          }
+
+          .news-caption h3 {
+              margin-top: 60px;
+          }
+
+          .news-caption-container {
+              position: absolute;
+              top: 320px;
+              background-image: url(../img/bg-news-caption.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+          h3 {
+              text-align: center;
+              margin-top: 50px;
+              margin-bottom: 0px;
+              font-size: 36px;
+              line-height: 20px;
+          }
+          .paragraph {
+              padding: 24px 24px 0px 24px;
+              font-weight: 300;
+              line-height: 18px;
+              font-size: 15px;
+              text-align: justify;
+              word-spacing: -0.9px;
+              letter-spacing: -0.4px;
+              margin-bottom: 12px;
+          }
+          .paragraph.right {
+              padding-right: 20px;
+          }
+          .paragraph.left {
+              padding-left: 0px;
+          }
+
+          .paragraph.home {
+              height: 114px;
+          }
+
+          .store-map {
+              padding-top: 24px;
+              width: 200px;
+              height: 114px;
+          }
+          .store-map > iframe {
+              border: thin solid var(--highlight);
+          }
+          .product-container {
+              background-image: url(../img/wheat-long-line.png);
+              background-repeat: no-repeat;
+              background-position: bottom;
+          }
+          .product-container:last-of-type {
+              background-image: none;
+
+          }
+
+          #navbar-top {
+              z-index: 2;
+              max-width: 1046px;
+              margin: auto;
+              position: relative;
+              padding: 0;
+          }
+
+          #navbar-top-toggle {
+              padding: 8px 10px;
+          }
+
+          .ribbon-container {
+              z-index: 0;
+              position: relative;
+              height: 0;
+              top: 85px;
+          }
+          .ribbon {
+              width: 1046px;
+              position: relative;
+              background: red;
+              height: 80px;
+              margin: auto;
+              min-width: 1046px;
+          }
+
+          .ribbon::before,
+          .ribbon::after {
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: -25px;
+              border: 40px solid #be7974;
+              z-index: -1;
+          }
+
+          .ribbon::before {
+              left: -55px;
+              border-right-width: 40px;
+              border-left-color: transparent;
+          }
+
+          .ribbon::after {
+              right: -55px;
+              border-left-width: 40px;
+              border-right-color: transparent;
+          }
+
+          .ribbon .ribbon-fold:before,
+          .ribbon .ribbon-fold:after {
+              content: "";
+              position: absolute;
+              display: block;
+              border-style: solid;
+              border-color: #9d4740 transparent transparent transparent;
+              bottom: -25px;
+          }
+
+          .ribbon .ribbon-fold:before {
+              left: 0;
+              border-width: 25px 0 0 25px;
+          }
+
+          .ribbon .ribbon-fold:after {
+              right: 0;
+              border-width: 25px 25px 0 0;
+          }
+
+          .ribbon-bottom {
+              width: auto;
+              position: absolute;
+              background: none;
+              height: 80px;
+              margin: auto;
+              min-width: auto;
+          }
+
+          .ribbon-bottom::before,
+          .ribbon-bottom::after {
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: 44px;
+              border: 15px solid #be7974;
+              z-index: -1;
+          }
+
+          .ribbon-bottom::after {
+              right: -275px;
+              border-left-width: 30px;
+              border-right-color: transparent;
+          }
+
+          .ribbon-bottom::before {
+              left: -25px;
+              border-right-width: 30px;
+              border-left-color: transparent;
+          }
+
+          .main-logo {
+              width: 250px;
+              height: auto;
+              top: -82px;
+              position: relative;
+              z-index: 2;
+
+          }
+
+          .logo-bg {
+              position: absolute;
+              top: calc(30px - (300px * 0.5));
+              width: 300px;
+              height: 300px;
+              left: calc(50% - (300px * 0.5));
+              z-index: 1;
+          }
+
+          #main-menu {
+              background-image: url(../img/nav-bg-white.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+          }
+
+          #main-menu.navbar-nav {
+              height: 80px;
+              padding: 0 5px;
+          }
+          #main-menu .nav-item {
+              width: 12%;
+              font-weight: 300;
+              font-size: 17px;
+          }
+          #main-menu .nav-item:nth-of-type(3) {
+              width: 27%;
+          }
+
+          .nav-link.btn {
+              outline-offset: -5px;
+              outline: 1px dashed #fff;
+          }
+          .bg-menu {
+              z-index: 0;
+              position: relative;
+              top: -128px;
+          }
+          .bg-menu-container {
+              top: 0px;
+              position: relative;
+              height: 0px;
+          }
+          #about-us {
+              background-image: url(../img/wheat-left.png);
+              background-position: right;
+              background-repeat: no-repeat;
+              display: block;
+          }
+          #store-location {
+              background-image: url(../img/wheat-right.png);
+              background-position: left;
+              background-repeat: no-repeat;
+              display: block;
+
+          }
+          .border-left {
+              border-left: 1px solid var(--highlight);
+              padding-left: 18px;
+          }
+          .nav-tabs {
+              border-bottom: 1px solid var(--highlight);
+          }
+          .nav-tabs .nav-item.show .nav-link,
+          .nav-tabs .nav-link.active {
+              border-color: var(--highlight) var(--highlight) #fff;
+          }
+          .nav-tabs .nav-link:focus,
+          .nav-tabs .nav-link:hover {
+              border-color: var(--highlight) var(--highlight) transparent;
+          }
+      }
