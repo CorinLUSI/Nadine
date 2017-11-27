@@ -684,7 +684,7 @@
               outline-offset: -5px;
               outline: 1px dashed #fff;
               font-weight: 300;
-              font-size: 17px;
+              font-size: 15px;
           }
           .bg-menu {
               z-index: 0;
@@ -756,8 +756,8 @@
           }
           .store-map > iframe {
               border: thin solid var(--highlight);
-              width: 200px;
-              height: 114px;
+              width: 100%;
+              height: auto;
           }
           .border-left {
               border-left: 1px solid var(--highlight);
