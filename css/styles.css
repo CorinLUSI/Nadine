@@ -31,6 +31,7 @@
           background-blend-mode: multiply;
           width: 100%;
           font-family: 'Merriweather', serif;
+          overflow-x: hidden;
       }
 
       button {
@@ -222,48 +223,198 @@
           text-align: right;
       }
 
+      .store-adress-field {
+          background-color: var(--highlight);
+      }
+
+      .store-adress-field a {
+          color: white;
+      }
+
+      .store-adress-field h4 {
+          color: white;
+      }
+
+      .bg-menu-container {
+          display: none;
+      }
+
       @media (min-width: 576px) {
-          ...
+          .gm-logo {
+              width: 40%;
+              margin: 0 30%;
+              height: auto;
+              z-index: 100;
+              position: absolute;
+              left: 0;
+              top: -90px;
+          }
+          
+          .news-caption {
+              background: transparent;
+          }
+
+          .news-caption h3 {
+              margin-top: 60px;
+          }
+
+          .news-caption-container {
+              position: absolute;
+              top: 130px;
+              background-image: url(../img/bg-news-caption.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
       }
 
       @media (min-width: 768px) {
-          ...
-      }
-
-      @media (min-width: 992px) {
-          ...
-      }
-
-      @media (min-width: 1200px) {
-          #html-container .navbar {
+          .wrapper {
+              padding-bottom: 70px;
+              max-width: 768px;
+          }
+          .ribbon-container {
+              z-index: 0;
+              position: relative;
+              height: 0;
+              top: 85px;
+          }
+          .ribbon {
+              width: 690px;
+              position: relative;
+              background: red;
               height: 80px;
+              margin: auto;
+              min-width: 690px;
           }
-          #html-container .flex-column {
-              width: 250px;
+
+          .ribbon::before,
+          .ribbon::after {
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: -25px;
+              border: 40px solid #be7974;
+              z-index: -1;
+          }
+
+          .ribbon::before {
+              left: -55px;
+              border-right-width: 40px;
+              border-left-color: transparent;
+          }
+
+          .ribbon::after {
+              right: -55px;
+              border-left-width: 40px;
+              border-right-color: transparent;
+          }
+
+          .ribbon .ribbon-fold:before,
+          .ribbon .ribbon-fold:after {
+              content: "";
+              position: absolute;
+              display: block;
+              border-style: solid;
+              border-color: #9d4740 transparent transparent transparent;
+              bottom: -25px;
+          }
+
+          .ribbon .ribbon-fold:before {
+              left: 0px;
+              border-width: 25px 0 0 25px;
+          }
+
+          .ribbon .ribbon-fold:after {
+              right: 0px;
+              border-width: 25px 25px 0 0;
+          }
+
+          .ribbon-bottom {
+              width: auto;
+              position: absolute;
+              background: none;
               height: 80px;
-              z-index: 5;
+              margin: auto;
+              min-width: auto;
           }
 
-          .flex-column-before {
+          .ribbon-bottom::before,
+          .ribbon-bottom::after {
+              content: "";
               position: absolute;
-              left: 70px;
-              bottom: 50px;
+              display: block;
+              bottom: 44px;
+              border: 15px solid #be7974;
+              z-index: -1;
           }
 
-          .flex-column-after {
+          .ribbon-bottom::after {
+              right: -275px;
+              border-left-width: 30px;
+              border-right-color: transparent;
+          }
+
+          .ribbon-bottom::before {
+              left: -25px;
+              border-right-width: 30px;
+              border-left-color: transparent;
+          }
+          .main-logo {
+              width: 170px;
+              height: auto;
+              top: -100px;
+              position: relative;
+              z-index: 2;
+
+          }
+
+          .logo-bg {
               position: absolute;
-              right: 70px;
-              bottom: 50px;
-
+              top: calc(30px - (300px * 0.5));
+              width: 300px;
+              height: 300px;
+              left: calc(50% - (300px * 0.5));
+              z-index: 1;
           }
-          .main-img {
-              border-top: 0px hidden #ffffff;
-              border-right: 20px solid #ffffff;
-              border-bottom: 20px solid #ffffff;
-              border-left: 20px solid #ffffff;
-              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
-              width: 1000px;
-              height: 560px;
+
+          #main-menu {
+              background-image: url(../img/nav-bg-white.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+          }
+
+          #main-menu.navbar-nav {
+              height: 64px;
+              padding: 0 5px;
+          }
+          #main-menu .nav-item {
+              width: 15%;
+              font-weight: 300;
+              font-size: 17px;
+          }
+          #main-menu .nav-item:nth-of-type(3) {
+              width: 27%;
+          }
+
+          .nav-link.btn {
+              outline-offset: -5px;
+              outline: 1px dashed #fff;
+              font-weight: 300;
+              font-size: 13px;
+          }
+          .bg-menu {
+              z-index: 0;
+              position: relative;
+              top: -108px;
+              width: 90%;
+          }
+          .bg-menu-container {
+              top: 0px;
+              position: relative;
+              height: 0px;
+              display: block;
           }
           .news-caption {
               background: transparent;
@@ -275,7 +426,7 @@
 
           .news-caption-container {
               position: absolute;
-              top: 320px;
+              top: 130px;
               background-image: url(../img/bg-news-caption.png);
               background-repeat: no-repeat;
               background-position: center;
@@ -283,7 +434,6 @@
           }
           h3 {
               text-align: center;
-              margin-top: 50px;
               margin-bottom: 0px;
               font-size: 36px;
               line-height: 20px;
@@ -292,7 +442,7 @@
               padding: 24px 24px 0px 24px;
               font-weight: 300;
               line-height: 18px;
-              font-size: 15px;
+              font-size: 14px;
               text-align: justify;
               word-spacing: -0.9px;
               letter-spacing: -0.4px;
@@ -307,38 +457,104 @@
 
           .paragraph.home {
               height: 114px;
+              padding: 24px 0px 0px 0px;
           }
-
+          .main-img {
+              border-top: 0px hidden #ffffff;
+              border-right: 15px solid #ffffff;
+              border-bottom: 15px solid #ffffff;
+              border-left: 15px solid #ffffff;
+              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+              width: 650px;
+              height: auto;
+          }
           .store-map {
               padding-top: 24px;
-              width: 200px;
-              height: 114px;
+              width: 100%;
+              height: auto;
           }
           .store-map > iframe {
               border: thin solid var(--highlight);
+              width: 100%;
+              height: auto;
+          }
+          .border-left {
+              border-left: 1px solid var(--highlight);
+              padding-left: 18px;
+          }
+          #about-us {}
+          #store-location {}
+          #html-container .flex-column {
+              width: 250px;
+              height: 80px;
+              z-index: 5;
+          }
+
+          .flex-column-before {
+              position: absolute;
+              left: 0px;
+              bottom: 55px;
+          }
+
+          .flex-column-after {
+              position: absolute;
+              right: 0px;
+              bottom: 55px;
+
+          }
+          .nav-tabs {
+              border-bottom: 1px solid var(--highlight);
+          }
+          .nav-tabs .nav-item.show .nav-link,
+          .nav-tabs .nav-link.active {
+              border-color: var(--highlight) var(--highlight) #fff;
+          }
+          .nav-tabs .nav-link:focus,
+          .nav-tabs .nav-link:hover {
+              border-color: var(--highlight) var(--highlight) transparent;
           }
           .product-container {
               background-image: url(../img/wheat-long-line.png);
               background-repeat: no-repeat;
               background-position: bottom;
           }
-          .product-container:last-of-type {
+          #nav-tabContent .product-container:last-of-type {
               background-image: none;
 
           }
-
-          #navbar-top {
-              z-index: 2;
-              max-width: 1046px;
-              margin: auto;
-              position: relative;
-              padding: 0;
+          #store-container .store-map {
+              width: 100%;
+              height: auto;
+              padding-top: 0px;
           }
 
-          #navbar-top-toggle {
-              padding: 8px 10px;
+          #store-container #opening-hours {
+              font-size: 14px;
           }
 
+          #store-container #opening-hours th {
+              text-align: left;
+          }
+
+          #store-container address {
+              font-size: 14px;
+              margin-bottom: 0;
+          }
+
+          #store-container .list-group .list-group-item {
+              width: 100%;
+              height: auto;
+          }
+
+          p {
+              font-size: 14px;
+          }
+      }
+
+      @media (min-width: 992px) {
+          .wrapper {
+              max-width: 1200px;
+          }
           .ribbon-container {
               z-index: 0;
               position: relative;
@@ -346,12 +562,12 @@
               top: 85px;
           }
           .ribbon {
-              width: 1046px;
+              width: 930px;
               position: relative;
               background: red;
               height: 80px;
               margin: auto;
-              min-width: 1046px;
+              min-width: 930px;
           }
 
           .ribbon::before,
@@ -394,6 +610,322 @@
           .ribbon .ribbon-fold:after {
               right: 0;
               border-width: 25px 25px 0 0;
+          }
+
+          .ribbon-bottom {
+              width: auto;
+              position: absolute;
+              background: none;
+              height: 80px;
+              margin: auto;
+              min-width: auto;
+          }
+
+          .ribbon-bottom::before,
+          .ribbon-bottom::after {
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: 44px;
+              border: 15px solid #be7974;
+              z-index: -1;
+          }
+
+          .ribbon-bottom::after {
+              right: -275px;
+              border-left-width: 30px;
+              border-right-color: transparent;
+          }
+
+          .ribbon-bottom::before {
+              left: -25px;
+              border-right-width: 30px;
+              border-left-color: transparent;
+          }
+          .main-logo {
+              width: 220px;
+              height: auto;
+              top: -100px;
+              position: relative;
+              z-index: 2;
+
+          }
+
+          .logo-bg {
+              position: absolute;
+              top: calc(30px - (300px * 0.5));
+              width: 300px;
+              height: 300px;
+              left: calc(50% - (300px * 0.5));
+              z-index: 1;
+          }
+
+          #main-menu {
+              background-image: url(../img/nav-bg-white.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+          }
+
+          #main-menu.navbar-nav {
+              height: 65px;
+              padding: 0 5px;
+          }
+          #main-menu .nav-item {
+              width: 12%;
+              font-weight: 300;
+              font-size: 17px;
+          }
+          #main-menu .nav-item:nth-of-type(3) {
+              width: 27%;
+          }
+
+          .nav-link.btn {
+              outline-offset: -5px;
+              outline: 1px dashed #fff;
+              font-weight: 300;
+              font-size: 17px;
+          }
+          .bg-menu {
+              z-index: 0;
+              position: relative;
+              top: -128px;
+              width: 90%;
+          }
+          .bg-menu-container {
+              top: 0px;
+              position: relative;
+              height: 0px;
+          }
+          .news-caption {
+              background: transparent;
+          }
+
+          .news-caption h3 {
+              margin-top: 60px;
+          }
+
+          .news-caption-container {
+              position: absolute;
+              top: 240px;
+              background-image: url(../img/bg-news-caption.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+          h3 {
+              text-align: center;
+              margin-bottom: 0px;
+              font-size: 36px;
+              line-height: 20px;
+          }
+          .paragraph {
+              padding: 24px 24px 0px 24px;
+              font-weight: 300;
+              line-height: 18px;
+              font-size: 14px;
+              text-align: justify;
+              word-spacing: -0.9px;
+              letter-spacing: -0.4px;
+              margin-bottom: 12px;
+          }
+          .paragraph.right {
+              padding-right: 20px;
+          }
+          .paragraph.left {
+              padding-left: 0px;
+          }
+
+          .paragraph.home {
+              height: 114px;
+              padding: 24px 0px 0px 0px;
+          }
+          .main-img {
+              border-top: 0px hidden #ffffff;
+              border-right: 15px solid #ffffff;
+              border-bottom: 15px solid #ffffff;
+              border-left: 15px solid #ffffff;
+              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+              width: 900px;
+              height: auto;
+          }
+          .store-map {
+              padding-top: 24px;
+              width: 200px;
+              height: 114px;
+          }
+          .store-map > iframe {
+              border: thin solid var(--highlight);
+              width: 200px;
+              height: 114px;
+          }
+          .border-left {
+              border-left: 1px solid var(--highlight);
+              padding-left: 18px;
+          }
+          #about-us {
+              background-image: url(../img/wheat-left.png);
+              background-position: right;
+              background-repeat: no-repeat;
+              display: block;
+          }
+          #store-location {
+              background-image: url(../img/wheat-right.png);
+              background-position: left;
+              background-repeat: no-repeat;
+              display: block;
+
+          }
+          #html-container .flex-column {
+              width: 250px;
+              height: 80px;
+              z-index: 5;
+          }
+
+          .flex-column-before {
+              position: absolute;
+              left: 0px;
+              bottom: 55px;
+          }
+
+          .flex-column-after {
+              position: absolute;
+              right: 0px;
+              bottom: 55px;
+
+          }
+          .nav-tabs {
+              border-bottom: 1px solid var(--highlight);
+          }
+          .nav-tabs .nav-item.show .nav-link,
+          .nav-tabs .nav-link.active {
+              border-color: var(--highlight) var(--highlight) #fff;
+          }
+          .nav-tabs .nav-link:focus,
+          .nav-tabs .nav-link:hover {
+              border-color: var(--highlight) var(--highlight) transparent;
+          }
+          .product-container {
+              background-image: url(../img/wheat-long-line.png);
+              background-repeat: no-repeat;
+              background-position: bottom;
+          }
+          #nav-tabContent .product-container:last-of-type {
+              background-image: none;
+
+          }
+          #store-container .store-map {
+              width: 100%;
+              height: auto;
+              padding-top: 0px;
+          }
+
+          #store-container #opening-hours {
+              font-size: 14px;
+          }
+
+          #store-container #opening-hours th {
+              text-align: left;
+          }
+
+          #store-container address {
+              font-size: 14px;
+              margin-bottom: 0;
+          }
+
+          #store-container .list-group .list-group-item {
+              width: 100%;
+              height: auto;
+          }
+
+          p {
+              font-size: 14px;
+          }
+
+      }
+
+      @media (min-width: 1200px) {
+          #html-container .navbar {
+              height: 80px;
+          }
+          .flex-column-before {
+              left: 70px;
+              bottom: 50px;
+          }
+
+          .flex-column-after {
+              right: 70px;
+              bottom: 55px;
+          }
+          .main-img {
+              border-top: 0px hidden #ffffff;
+              border-right: 20px solid #ffffff;
+              border-bottom: 20px solid #ffffff;
+              border-left: 20px solid #ffffff;
+              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+              width: 1000px;
+              height: 560px;
+          }
+          .news-caption {
+              background: transparent;
+          }
+
+          .news-caption h3 {
+              margin-top: 60px;
+          }
+
+          .news-caption-container {
+              position: absolute;
+              top: 320px;
+              background-image: url(../img/bg-news-caption.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+          h3 {
+              text-align: center;
+              margin-bottom: 0px;
+              font-size: 36px;
+              line-height: 20px;
+          }
+          .paragraph {
+              padding: 24px 24px 0px 24px;
+              font-weight: 300;
+              line-height: 18px;
+              font-size: 15px;
+              text-align: justify;
+              word-spacing: -0.9px;
+              letter-spacing: -0.4px;
+              margin-bottom: 12px;
+          }
+          .paragraph.right {
+              padding-right: 20px;
+          }
+          .paragraph.left {
+              padding-left: 0px;
+          }
+
+          .paragraph.home {
+              height: 114px;
+              padding: 24px 24px 0px 24px;
+          }
+
+          #navbar-top {
+              z-index: 2;
+              max-width: 1046px;
+              margin: auto;
+              position: relative;
+              padding: 0;
+          }
+
+          #navbar-top-toggle {
+              padding: 8px 10px;
+          }
+
+          .ribbon {
+              width: 1046px;
+              height: 80px;
+              min-width: 1046px;
           }
 
           .ribbon-bottom {
@@ -479,32 +1011,15 @@
               position: relative;
               height: 0px;
           }
-          #about-us {
-              background-image: url(../img/wheat-left.png);
-              background-position: right;
-              background-repeat: no-repeat;
-              display: block;
+          #store-container #opening-hours {
+              font-size: 1.2rem;
           }
-          #store-location {
-              background-image: url(../img/wheat-right.png);
-              background-position: left;
-              background-repeat: no-repeat;
-              display: block;
 
+          #store-container address {
+              font-size: 1.2rem;
           }
-          .border-left {
-              border-left: 1px solid var(--highlight);
-              padding-left: 18px;
-          }
-          .nav-tabs {
-              border-bottom: 1px solid var(--highlight);
-          }
-          .nav-tabs .nav-item.show .nav-link,
-          .nav-tabs .nav-link.active {
-              border-color: var(--highlight) var(--highlight) #fff;
-          }
-          .nav-tabs .nav-link:focus,
-          .nav-tabs .nav-link:hover {
-              border-color: var(--highlight) var(--highlight) transparent;
+
+          p {
+              font-size: inherit;
           }
       }
