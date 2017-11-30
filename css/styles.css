@@ -185,8 +185,7 @@
       }
 
       .gm-logo {
-          width: 48%;
-          margin: 0 26%;
+          width: 100%;
           height: auto;
           z-index: 100;
           position: absolute;
@@ -286,11 +285,13 @@
           }
           #html-container .footer {
               width: 100%;
-              height: 0vh;
-              position: relative;
-              bottom: 5vh;
+              height: 43px;
+              position: fixed;
+              bottom: 43px;
               background: none;
               left: 0;
+              border-top: 60px double white;
+              border-image: linear-gradient(rgba(255, 255, 255, 0.1), white 90%) 60 stretch;
           }
           #html-container .footer .flex-column {
               width: 100%;
@@ -332,7 +333,7 @@
           .news-caption p {
               height: 50vh;
               background-color: white;
-              
+
           }
           .paragraph {
               padding: 24px 24px 0px 24px;
@@ -341,7 +342,7 @@
               font-size: 14px;
               text-align: justify;
               word-spacing: 0px;
-              letter-spacing: 0px;
+              letter-spacing: -0.4px;
               margin-bottom: 10px;
           }
           #opening-hours {
@@ -356,12 +357,15 @@
               background-size: cover;
               bottom: 0;
           }
-          .news-caption-container > div {}
+          h1 {
+              line-height: 1;
+          }
+          .lead {
+              font-size: 1rem;
+          }
           h3 {
               text-align: center;
               margin-bottom: 0px;
-              font-size: 30px;
-              line-height: 20px;
           }
           #about-us {
               height: 100vh;
@@ -371,17 +375,17 @@
               width: 100%;
               background-color: white;
               left: 0;
-              padding-top: 15%;
-              border-bottom: solid 8px var(--highlight);
+              padding-top: 10%;
               border-top: solid 8px var(--highlight);
           }
           #store-location {
               position: relative;
               top: 201%;
-              height: 95vh;
+              height: 100vh;
               left: 0;
               background-color: white;
-              padding-top: 15%;
+              padding-top: 10%;
+              border-top: solid 8px var(--highlight);
           }
           .store-map iframe {
               width: 100%;
@@ -389,8 +393,53 @@
               padding-right: 24px;
               padding-left: 24px;
           }
+          #store-container .store-map iframe {
+              padding-right: 0px;
+              padding-left: 0px;
+          }
           #gt-details {
               margin-bottom: 0%;
+          }
+          .nav-tabs {
+              border-bottom: 1px solid var(--highlight);
+          }
+          .nav-tabs .nav-item.show .nav-link,
+          .nav-tabs .nav-link.active {
+              border-color: var(--highlight) var(--highlight) #fff;
+          }
+          .nav-tabs .nav-link:focus,
+          .nav-tabs .nav-link:hover {
+              border-color: var(--highlight) var(--highlight) transparent;
+          }
+          .product-container {
+              background-image: url(../img/wheat-long-line.png);
+              background-repeat: no-repeat;
+              background-position: bottom;
+              background-size: 80%;
+          }
+          #nav-tabContent .product-container:last-of-type {
+              background-image: none;
+
+          }
+          #accordion {
+              padding-bottom: 103px;
+              border-top: 1px solid var(--highlight);
+          }
+          .card {
+              border-bottom: 1px solid var(--highlight);
+              border-radius: 0px;
+          }
+          .card:last-of-type {
+              border-bottom: 0px;
+          }
+          #philosophy-text .paragraph:first-of-type {
+              padding-top: 0px;
+          }
+          #philosophy-text .paragraph {
+              padding-top: 12px;
+          }
+          h5 + small {
+              display: none;
           }
       }
 
@@ -426,6 +475,146 @@
           }
           .wrapper {
               padding-top: 85px;
+          }
+          .ribbon-container {
+              z-index: 0;
+              position: relative;
+              height: 0;
+              top: 85px;
+          }
+          .ribbon {
+              width: 510px;
+              position: relative;
+              background: red;
+              height: 56px;
+              margin: auto;
+              min-width: 510px;
+          }
+
+          .ribbon::before,
+          .ribbon::after {
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: -25px;
+              border: 25px solid #be7974;
+              z-index: -1;
+          }
+
+          .ribbon::before {
+              left: -40px;
+              border-right-width: 40px;
+              border-left-color: transparent;
+          }
+
+          .ribbon::after {
+              right: -40px;
+              border-left-width: 40px;
+              border-right-color: transparent;
+          }
+
+          .ribbon .ribbon-fold:before,
+          .ribbon .ribbon-fold:after {
+              content: "";
+              position: absolute;
+              display: block;
+              border-style: solid;
+              border-color: #9d4740 transparent transparent transparent;
+              bottom: -25px;
+          }
+
+          .ribbon .ribbon-fold:before {
+              left: 0px;
+              border-width: 25px 0 0 25px;
+          }
+
+          .ribbon .ribbon-fold:after {
+              right: 0px;
+              border-width: 25px 25px 0 0;
+          }
+          .news-caption {
+              background: transparent;
+          }
+
+          .news-caption h3 {
+              margin-top: 60px;
+          }
+
+          .news-caption-container {
+              position: absolute;
+              top: 55px;
+              background-image: url(../img/bg-news-caption.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+          h3 {
+              text-align: center;
+              margin-bottom: 0px;
+          }
+          .paragraph {
+              padding: 24px 24px 0px 24px;
+              font-weight: 300;
+              line-height: 18px;
+              font-size: 14px;
+              text-align: justify;
+              word-spacing: -0.9px;
+              letter-spacing: -0.4px;
+              margin-bottom: 12px;
+          }
+          .paragraph.right {
+              padding-right: 20px;
+          }
+          .paragraph.left {
+              padding-left: 0px;
+          }
+
+          .paragraph.home {
+              height: 114px;
+              padding: 24px 0px 0px 0px;
+          }
+          .main-img {
+              border-top: 0px hidden #ffffff;
+              border-right: 15px solid #ffffff;
+              border-bottom: 15px solid #ffffff;
+              border-left: 15px solid #ffffff;
+              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+              width: 650px;
+              height: auto;
+          }
+          .store-map {
+              padding-top: 24px;
+              width: 100%;
+              height: auto;
+          }
+          .store-map > iframe {
+              border: thin solid var(--highlight);
+              width: 100%;
+              height: auto;
+          }
+          .border-left {
+              border-left: 1px solid var(--highlight);
+              padding-left: 18px;
+          }
+          #about-us {}
+          #store-location {}
+          #html-container .flex-column {
+              width: 250px;
+              height: 80px;
+              z-index: 5;
+          }
+
+          .flex-column-before {
+              position: absolute;
+              left: 0px;
+              bottom: 55px;
+          }
+
+          .flex-column-after {
+              position: absolute;
+              right: 0px;
+              bottom: 55px;
+
           }
       }
 
@@ -596,8 +785,6 @@
           h3 {
               text-align: center;
               margin-bottom: 0px;
-              font-size: 36px;
-              line-height: 20px;
           }
           .paragraph {
               padding: 24px 24px 0px 24px;
@@ -877,8 +1064,6 @@
           h3 {
               text-align: center;
               margin-bottom: 0px;
-              font-size: 36px;
-              line-height: 20px;
           }
           .paragraph {
               padding: 24px 24px 0px 24px;
@@ -981,6 +1166,11 @@
               padding-top: 0px;
           }
 
+          #store-container .store-map > iframe {
+              width: 100%;
+              height: 25vmax;
+          }
+
           #store-container #opening-hours {
               font-size: 14px;
           }
@@ -1046,8 +1236,6 @@
           h3 {
               text-align: center;
               margin-bottom: 0px;
-              font-size: 36px;
-              line-height: 20px;
           }
           .paragraph {
               padding: 24px 24px 0px 24px;
@@ -1186,5 +1374,9 @@
           .store-map > iframe {
               width: 200px;
               height: 114px;
+          }
+          #store-container .store-map > iframe {
+              width: 100%;
+              height: 25vmax;
           }
       }
